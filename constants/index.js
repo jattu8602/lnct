@@ -1,16 +1,72 @@
 const siteData = {
   colleges: [
     {
-      name: 'LNCT',
-      description: '',
+      name: 'Lakshmi Narain College of Technology (LNCT)',
+      description:
+        'Lakshmi Narain College of Technology (LNCT), established in 1994, is a premier private engineering and management institute located in Bhopal, Madhya Pradesh. Affiliated with RGPV and approved by AICTE, LNCT offers a range of undergraduate and postgraduate programs in engineering, management, pharmacy, and computer applications. The college is known for its state-of-the-art infrastructure, experienced faculty, and strong placement records.',
       link: 'https://lnct.ac.in',
-      logo: '',
-      photos: [],
-      eventsPhotos: [],
-      address: '',
-      number: [],
-      location: { latitude: null, longitude: null },
-      city: '',
+      logo: 'https://lnct.ac.in/wp-content/uploads/2021/04/lnct-logo.png',
+      photos: [
+        {
+          name: 'Main Campus Building',
+          tag: 'Campus',
+          description: 'The main academic building of LNCT Bhopal.',
+          url: 'https://lnct.ac.in/wp-content/uploads/2021/04/lnct-campus.jpg',
+        },
+        {
+          name: 'Digital Library',
+          tag: 'Library',
+          description:
+            'State-of-the-art digital library accessible to all students.',
+          url: 'https://lnct.ac.in/wp-content/uploads/2021/04/lnct-library.jpg',
+        },
+        {
+          name: 'Hostel Facilities',
+          tag: 'Hostel',
+          description:
+            'Comfortable and secure hostel accommodations for students.',
+          url: 'https://lnct.ac.in/wp-content/uploads/2021/04/lnct-hostel.jpg',
+        },
+      ],
+      eventsPhotos: [
+        {
+          name: 'LNUniverse 2025',
+          tag: 'Cultural Fest',
+          description:
+            'Annual cultural fest featuring music, dance, and drama performances.',
+          url: 'https://lnct.ac.in/wp-content/uploads/2025/05/lnuniverse-2025.jpg',
+        },
+        {
+          name: 'IEEE Orientation Program',
+          tag: 'Technical Event',
+          description:
+            'Orientation program for newly joined IEEE student members.',
+          url: 'https://lnct.ac.in/wp-content/uploads/2025/04/ieee-orientation.jpg',
+        },
+        {
+          name: 'Lake-city Hackathon Winners',
+          tag: 'Hackathon',
+          description: 'LNCT students winning the Lake-city Hackathon.',
+          url: 'https://lnct.ac.in/wp-content/uploads/2025/04/hackathon-winners.jpg',
+        },
+      ],
+      address:
+        'Kalchuri Nagar, (P.O. Kolua), Raisen Road, Bhopal - 462022, Madhya Pradesh, India',
+      number: [
+        '+91-755-6185300',
+        '+91-755-6185301',
+        '+91-755-6185302',
+        '+91-755-6185303',
+        '+91-755-6185304',
+        '+91-755-6185305',
+        '+91-7440777111',
+        '+91-7201800001',
+      ],
+      location: {
+        latitude: 23.2335,
+        longitude: 77.4977,
+      },
+      city: 'Bhopal',
     },
     {
       name: 'JNCT Professional University',
