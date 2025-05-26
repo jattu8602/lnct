@@ -1,0 +1,22 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# DO's and Dont's
+1. for photo, logo , videos upload -- use cloudinary
+2. use prisma
+3. maintain jsx code
+4. use mongo db for other textual data
+
+
+# workflow
+make /admin , /admin/colleges, /admin/firms, /admin/school
+/admin home - for stats , no of videos , no. of photoes, no. of colleges , firms , school and their descriptive data in detial analysis
+
+1. colleges - name, description , link,logo(upload in cloudinary ) , photoes(name , tag, description, url (upload in cloudinary))  ,eventPhotoes(name , tag, description, url(cloudinary )), eventVideos(name , tag, description , url (uplaod in cloudinary)), adress, number, location , city ,courses(logo, name ) , companies(logo , name , description )
+
+2. school- name, description , link,logo(upload in cloudinary ) , photoes(name , tag, description, url (upload in cloudinary))  ,eventPhotoes(name , tag, description, url(cloudinary )), eventVideos(name , tag, description , url (uplaod in cloudinary)), adress, number, location , city
+
+
+3.firms -name, description , link,logo(upload in cloudinary ) , photoes(name , tag, description, url (upload in cloudinary))  ,eventPhotoes(name , tag, description, url(cloudinary )), eventVideos(name , tag, description , url (uplaod in cloudinary)), adress, number, location , city
