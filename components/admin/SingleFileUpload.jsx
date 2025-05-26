@@ -44,6 +44,7 @@ export default function SingleFileUpload({
         throw new Error(`Upload failed: ${response.statusText}`)
       }
 
+      
       const data = await response.json()
       const result = {
         url: data.secure_url,
