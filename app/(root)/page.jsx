@@ -2,35 +2,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import Header from "@/components/header"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-red-600 to-red-800 text-white py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="md:w-2/3">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Welcome to Lakshmi Narain College of Technology
-            </h1>
-            <p className="text-lg md:text-xl mb-8">
-              Empowering students through quality education and innovative learning experiences since 1994.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
-                Apply Now
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Explore Programs
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div
-          className="absolute bottom-0 right-0 w-full h-16 bg-white"
-          style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%)" }}
-        ></div>
-      </section>
+      <Header/>
 
       {/* Announcements */}
       <section className="py-12 bg-gray-50">
@@ -184,7 +162,7 @@ export default function Home() {
         </div>
       </section>
 
-      
+
     </div>
   )
 }

@@ -77,18 +77,18 @@ export default function ScrollIndicator() {
             cx="50"
             cy="50"
             r={radius}
-            fill="white"
-            stroke="#e5e7eb"
+            fill="#111827"
+            stroke="#261063"
             strokeWidth="4"
             className="drop-shadow-md"
           />
-          {/* Progress circle */}
+          {/* Progress circle       #261063   */}
           <circle
             cx="50"
             cy="50"
             r={radius}
             fill="transparent"
-            stroke="#dc2626"
+            stroke="red"
             strokeWidth="4"
             strokeLinecap="round"
             strokeDasharray={circumference}
@@ -102,14 +102,14 @@ export default function ScrollIndicator() {
             <foreignObject x="22" y="22" width="56" height="56">
               <div
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "#111827",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: '#111827',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }}
               >
                 <video
@@ -118,12 +118,19 @@ export default function ScrollIndicator() {
                   loop
                   muted
                   playsInline
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </foreignObject>
           ) : (
-            <text x="50" y="55" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#111827">
+            <text
+              x="50"
+              y="55"
+              textAnchor="middle"
+              fontSize="14"
+              fontWeight="bold"
+              fill="#ffffff" // ✅ This sets the actual color to white
+            >
               LNCT
             </text>
           )}

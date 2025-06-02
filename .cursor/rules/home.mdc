@@ -1,0 +1,54 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+web and mobile responsive landing page -
+# Header -
+1. contains scrolling logos
+2. description, text , image , package
+3. dont add any button here
+
+# Colleges Component - we have multiple colleges to show - approx 20
+show nice ui -
+1. left side  -- contains multiple colleges logo and name
+2. right side -- after some time it changes and shows one by one colleges from left side - contains image of college , name , adress, go to college website link ,
+
+# School  - we have only one school to show
+1. conatins 4-5 images slider
+2. name of school , description , adress, link
+
+# firms - we have multiple firms to show - approx 7
+design same just like college component
+
+# #1 component -
+1. contains image of 1
+2. description
+3. virtual trour link , image
+
+# International conferenct + student news and notificaitions
+
+# packages
+1. show increasing order number when user comes on this componet
+
+# lnct advantages
+1. make nice ui and scalabel ui for this
+
+# why lnct
+
+# news and Media
+
+# placement banners
+
+# latest articles  and blog post
+
+# research and developement
+1. make animated nice ui of graph of somone comes to this component
+
+# aicte feedback
+
+# gallery
+show nice gallery and add a button see more
+
+
+

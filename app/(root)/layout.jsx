@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Navbar />
-          <main className="pt-20 min-h-screen">{children}</main>
+          <main className="pt-16 min-h-screen">{children}</main>
           <Footer />
           <ScrollIndicator />
         </ThemeProvider>
