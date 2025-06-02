@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 
-// Animated Counter Component
+// Animated Counter Component (supports decimals)
 function AnimatedCounter({ end, duration = 2000, suffix = '' }) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState('0')
 
   useEffect(() => {
     let startTime
@@ -14,9 +14,8 @@ function AnimatedCounter({ end, duration = 2000, suffix = '' }) {
     const animate = (currentTime) => {
       if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1)
-
-      setCount(Math.floor(progress * end))
-
+      const value = (progress * end).toFixed(end % 1 !== 0 ? 2 : 0)
+      setCount(value)
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }
@@ -40,11 +39,9 @@ export default function Achievements() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
+        if (entry.isIntersecting) setIsVisible(true)
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     )
 
     const element = document.getElementById('achievements-section')
@@ -55,8 +52,8 @@ export default function Achievements() {
 
   const achievements = [
     {
-      number: 112,
-      suffix: 'Cr.',
+      number: 1.12,
+      suffix: ' Cr.',
       label: 'Highest Package',
       color: 'text-purple-600',
     },
@@ -120,7 +117,7 @@ export default function Achievements() {
           {achievements.map((stat, index) => (
             <Card
               key={index}
-              className="text-center p-6 hover:shadow-lg transition-shadow duration-300 transform hover:scale-105"
+              className="text-center p-6 hover:shadow-lg transition duration-300 transform hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-0">

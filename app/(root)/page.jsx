@@ -22,6 +22,7 @@ export default function Home() {
       <School />
       <IndustryPartners />
       <InternationalConference />
+
       <StudentNews />
       <Achievements />
       <LNCTAdvantages />
