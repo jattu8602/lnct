@@ -1,82 +1,117 @@
-'use client'
-
-import { Card, CardContent } from '@/components/ui/card'
 import {
-  Building,
-  Award,
-  TrendingUp,
-  Users,
   GraduationCap,
-  Zap,
+  Award,
+  Users,
+  Globe,
+  Building,
+  BookOpen,
 } from 'lucide-react'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 
-const reasons = [
-  {
-    icon: <Building className="w-8 h-8" />,
-    title: 'Best Infrastructure',
-    description:
-      'LNCT Group of Colleges have Best Infrastructure with State-of-the-Art laboratories, Latest Machines and Smart Classrooms with A/V facility',
-  },
-  {
-    icon: <Award className="w-8 h-8" />,
-    title: '32+ Years of Excellence',
-    description:
-      "Best Engineering Colleges with 32+ Years of Academic Excellence and Discipline. Highest Chancellor's Awards and Highest Placements in Central India.",
-  },
-  {
-    icon: <TrendingUp className="w-8 h-8" />,
-    title: 'Unbeatable Placement Record',
-    description:
-      'Unbeatable Record Placement of Central India with 1800+ Offers by 40 Companies. Closed Campus only for LNCT Group of Colleges',
-  },
-  {
-    icon: <Users className="w-8 h-8" />,
-    title: 'Sports Excellence',
-    description:
-      'Other than Best Academics and Placements, Providing Best Sports facilities also. Producing National & International Players in Drop Row Ball, Base Ball, Throw Ball, Kabbaddi etc.',
-  },
-  {
-    icon: <GraduationCap className="w-8 h-8" />,
-    title: 'NBA Accreditation',
-    description:
-      'Best Engineering Institutions with NBA Accreditation & 188+ Ph.D Faculties for Academic Excellence. 191+ Patents filed and published in last 3 years leads to Best Research Environment.',
-  },
-  {
-    icon: <Zap className="w-8 h-8" />,
-    title: 'Best Campus Infrastructure',
-    description:
-      'Lush Green Campus having Boys & Girls Hostels with 24 hours Security, Dispensary, Bank ATMs, GYM, Indoor and Outdoor Fields makes it a BEST Infrastructure campus.',
-  },
-]
+export default function WhyChooseLNCT() {
+  const reasons = [
+    {
+      icon: Award,
+      title: 'NIRF Ranked #1',
+      description:
+        'Top engineering college in Bhopal, Madhya Pradesh with ISO-9001 certification and NBA accreditation',
+      highlight: '32+ Years Legacy',
+    },
+    {
+      icon: Building,
+      title: 'World-Class Infrastructure',
+      description:
+        '50-acre lush green campus with smart classrooms, advanced labs, and 50,000+ books digital library',
+      highlight: 'Modern Facilities',
+    },
+    {
+      icon: BookOpen,
+      title: '100+ Academic Programs',
+      description:
+        'Comprehensive portfolio across engineering, management, pharmacy, and medical education',
+      highlight: 'Diverse Options',
+    },
+    {
+      icon: Users,
+      title: '260+ Industry Partners',
+      description:
+        'Strong placement network with Amazon, Wipro, IBM, Cognizant, and Capgemini',
+      highlight: 'Career Success',
+    },
+    {
+      icon: Globe,
+      title: 'Global Alumni Network',
+      description:
+        '2,000+ professionals worldwide providing mentorship and career opportunities',
+      highlight: 'Worldwide Reach',
+    },
+    {
+      icon: GraduationCap,
+      title: 'Innovation Centers',
+      description:
+        'KLICK, EDIIC, and AIIC centers fostering entrepreneurship and startup culture',
+      highlight: 'Future Ready',
+    },
+  ]
 
-export default function WhyLNCT() {
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-900 via-purple-900 to-purple-800 text-white">
-      <div className="container mx-auto px-4">
+    <section className="w-full min-h-screen flex items-center justify-center py-16 md:py-24 bg-gradient-to-br from-blue-50 via-white to-green-50">
+      <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">WHY LNCT ?</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto">
-            Synonymous With Excellence in Higher Education
+          <Badge variant="secondary" className="mb-4 text-sm font-medium">
+            Central India's Premier Educational Institution
+          </Badge>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+            Why Choose <span className="text-blue-600">LNCT Group?</span>
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Join over 32 years of academic excellence at Central India's most
+            preferred destination for engineering, management, pharmacy, and
+            medical education.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reasons.map((item, index) => (
-            <Card
-              key={index}
-              className="bg-white/10 border-white/20 p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
-            >
-              <CardContent className="text-center p-0">
-                <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  {item.icon}
-                </div>
-                <h3 className="font-semibold mb-3 text-lg">{item.title}</h3>
-                <p className="text-sm opacity-90 leading-relaxed">
-                  {item.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {reasons.map((reason, index) => {
+            const IconComponent = reason.icon
+            return (
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 border-0 shadow-md hover:-translate-y-1"
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                        <IconComponent className="w-6 h-6 text-blue-600" />
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                          {reason.title}
+                        </h3>
+                        <Badge variant="outline" className="text-xs">
+                          {reason.highlight}
+                        </Badge>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {reason.description}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )
+          })}
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="inline-flex items-center space-x-2 text-sm text-muted-foreground">
+            <Award className="w-4 h-4" />
+            <span>Established 1994 • AICTE Approved • RGPV Affiliated</span>
+          </div>
         </div>
       </div>
     </section>

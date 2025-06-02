@@ -25,8 +25,10 @@ export default function Home() {
 
       <StudentNews />
       <Achievements />
+
       <LNCTAdvantages />
       <WhyLNCT />
+
       <CampusLife />
       <ResearchDevelopment />
       <BlogPosts />

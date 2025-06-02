@@ -3,12 +3,14 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import { User, Calendar, ArrowRight } from 'lucide-react'
 
 const blogPosts = [
   {
     title: "Google's Bard has transformed into Gemini What's Different?",
-    image: '/placeholder.svg?height=200&width=300',
+    image:
+      'https://imgs.search.brave.com/cwwbYPU2MSoYkzlYDPBy0cP4pJO4BPup5U9u6ak_p0k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0RY/Q0Z1U05UNUczdlp2/THVtaVBSTDguanBn',
     date: 'February 9, 2024',
     author: 'admin',
     excerpt:
@@ -16,7 +18,8 @@ const blogPosts = [
   },
   {
     title: 'What is the Future of Blockchain Technology by 2025?',
-    image: '/placeholder.svg?height=200&width=300',
+    image:
+      'https://imgs.search.brave.com/Vqx_O8S_ZRHh26hIo9LPtOz5YALN8BAxL5uMaAPZwvw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by8z/ZC1yZW5kZXJpbmct/YmxvY2tjaGFpbi10/ZWNobm9sb2d5XzIz/LTIxNTE0ODAxOTIu/anBnP3NlbXQ9YWlz/X2l0ZW1zX2Jvb3N0/ZWQmdz03NDA',
     date: 'February 8, 2024',
     author: 'admin',
     excerpt:
@@ -24,7 +27,8 @@ const blogPosts = [
   },
   {
     title: 'Artificial Intelligence in Cybersecurity Enhancing Digital Defense',
-    image: '/placeholder.svg?height=200&width=300',
+    image:
+      'https://imgs.search.brave.com/RlyzZqKF30obDGaBQqPjyeBMnbpk6cyQexvq8EVXXb0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9zbWFy/dHBob25lLXNob3dz/LWhpZ2gtdGVjaC1m/dXR1cmlzdGljLWlu/dGVyZmFjZS1hZ2Fp/bnN0LXVyYmFuLWlu/ZnJhc3RydWN0dXJl/LWJhY2tkcm9wLXN1/aXRhYmxlLW1hcmtl/dGluZy1haS1jeWJl/cnNlY3VyaXR5LTM2/OTUxNzM0MC5qcGc',
     date: 'February 7, 2024',
     author: 'admin',
     excerpt:
@@ -32,7 +36,8 @@ const blogPosts = [
   },
   {
     title: 'The Rise of Quantum Computing in Modern Technology',
-    image: '/placeholder.svg?height=200&width=300',
+    image:
+      'https://imgs.search.brave.com/AywYAKVBAWFPFqFaOdm6Jis_bw-UqFMK8cimrqlKPEs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzA5LzM2LzA3/LzM2MF9GXzUwOTM2/MDc0MV9HYnRiNkpG/ZVdTR21FVG5NWVV0/NlRVZzNzSURNMTVF/TS5qcGc',
     date: 'February 5, 2024',
     author: 'admin',
     excerpt:
@@ -92,9 +97,11 @@ export default function BlogPosts() {
         </div>
 
         <div className="text-center mt-8">
-          <Button className="bg-purple-600 hover:bg-purple-700">
-            View All Articles <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          <Link href="https://lnct.ac.in/blog">
+            <Button className="bg-purple-600 hover:bg-purple-700 cursor-pointer">
+              View All Articles <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
