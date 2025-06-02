@@ -1,0 +1,183 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+WEBSITE must be responsive to mobile and desktop screens
+# I am making the website for my colleges - i need to connect multiple websites of my college at one place -
+
+# Sections - make a nice animated navigation bar mobile and desktop screen responsive
+Header - naivgation bar , logo
+(Home
+About
+Events
+Alumni
+FAQs
+Campus Map
+Help Desk)
+Footer - links
+
+
+# Complete Description -
+## 🔹 1. Home
+Purpose: Entry point of your site that highlights the LNCT Group identity.
+Includes:
+Hero section with LNCT Group logo, motto, and key highlights
+Introduction paragraph about the LNCT Group (vision, scale, diversity)
+Carousel/Slider for:
+Campus images
+Achievements
+Placements
+Quick access cards to popular portals (Admissions, Academics, Events)
+
+## 🔹 2. About
+Dropdown Sections:
+🏫 Colleges
+Group them smartly:
+By Type:
+Engineering Colleges (LNCT, LNCTE, LNCTS, JNCT, JNCN, etc.)
+Medical & Health Sciences (LNMC, CLCHomeopathy, LN Ayurved College, LNCT Nursing, LNCT Paramedical)
+Pharmacy (LNCP, Ananjay Pharma, Vitamax)
+Management (LNCT MBA, MCA Colleges)
+Polytechnic (LNCT Polytechnic)
+Agriculture (IPS Bilaspur)
+
+By Location:
+Bhopal
+Indore
+Bilaspur
+Jabalpur
+
+"LNCT Bhopal – Flagship Engineering College Established in 1993"
+
+🎓 Departments / Courses
+Engineering Branches (CSE, ECE, ME, CE, AI/ML, etc.)
+Medical Courses (MBBS, BAMS, BHMS, Nursing, Paramedical)
+Pharmacy (B.Pharm, D.Pharm)
+Management (MBA, BBA)
+IT / Computer Applications (MCA, BCA)
+Agriculture, Education, Law, etc.
+
+Let each department open a modal or page showing:
+Syllabus
+Faculty
+Labs
+Career scope
+
+
+
+🏫 Schools
+LNCT World Schools (Bhopal, Raisen, etc.)
+School curriculum
+Facilities
+Admission details
+Photos of school infrastructure
+
+🏢 Firms & Groups
+List LNCT-associated business/industry units with brief intros:
+Jayant Jaggery – Agro-based sugarcane unit
+Kalchuri Contractors – Infra and construction
+Parvati Sweetners
+Vitamax – Health supplement unit
+Ananjay Pharma – Pharmaceutical division
+Dabra Alcobrew – Distillery firm
+
+You can have cards with:
+
+Logo
+
+One-line tagline
+
+"Visit Site" button
+
+🔹 3. Events
+Purpose: Showcase all major college-wide events.
+📅 Upcoming Events Calendar
+College Fests, Seminars, Hackathons, Webinars
+
+📸 Photo Gallery
+Events album-wise (Annual Day, Freshers, Sports, Techfest)
+
+🎥 Video Gallery
+Embedded YouTube or uploaded videos
+
+Filter Options: by Year, College, or Event Type
+
+🔹 4. Alumni
+Success Stories – Top alumni in tech, medicine, startups
+Alumni Network – Option to join a LinkedIn/Facebook group
+Gallery – Throwback photos, past convocation ceremonies
+
+🔹 5. FAQs
+Grouped by:
+
+Admissions (e.g., "What are the cutoffs?", "How to apply?")
+Academics (e.g., "Where can I find the syllabus?")
+Placements (e.g., "How are the placement stats?")
+Technical (login issues, portal errors)
+General Queries
+
+UX Tip: Use accordion-style UI here.
+
+🔹 6. Campus Map
+Embed Google Map with pins for:
+LNCT Bhopal, LNCTU, JNCT, JNCN, LNCTE, LNMC Indore, etc.
+Filter by:
+City (Bhopal, Indore, Bilaspur)
+Type (Engineering, Medical, School, Firm)
+Optional: Custom SVG map layout with interactive hover effects
+
+🔹 7. Help Desk
+Central contact form with name, email, message
+Campus-wise contact details (email, phone, address)
+Admin/Technical support emails
+Google Map Embed
+Social Media Links (LinkedIn, Instagram, X, Facebook)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# List of my college - websites in defferent fields (colleges, school , firms )
+## Colleges :-
+https://lnct.ac.in – Lakshmi Narain College of Technology (LNCT)
+https://jnctpu.edu.in – JNCT Professional University
+https://indorelnmc.com – Indore LN Medical College
+https://lncpbhopal.in – LNCP Bhopal
+https://lnctbhopal.in – LNCT Bhopal
+https://lncte.in – LNCT Engineering College
+https://lnctbplindorecampus.in – LNCT Bhopal Indore Campus
+https://clchomeopathy.in – CLC Homeopathy College
+https://lnctu.ac.in – LNCT University
+https://jnctbhopal.ac.in – JNCT Bhopal
+https://lnctvu.ac.in – LNCT Vidhyapeeth University
+https://jayantjaggery.com – Jayant Jaggery College
+https://indorelnmc.in – Indore LN Medical College (alt)
+https://cecbilaspur.ac.in – CEC Bilaspur
+https://lnctuj.com – LNCT Jabalpur
+https://lncts.in – LNCT & Science
+https://lnctmca.in – LNCT MCA College
+https://ipsbilaspur.com – IPS Bilaspur
+https://lnayurvedcollege.com – LN Ayurved College
+
+## School
+LNCT World School - https://lnctworldschools.com
+
+
+## Firms
+1. Ananjay Private Limited - https://ananjay.co.in
+2. Dabra Alcobrew Private Limited - https://dabraalcobrew.com
+3. Rishiraj College of Dental Sciences and Research Centre - https://lnctrishiraj.ac.in
+4. Ananjay Pharmaceuticals Private Limited - https://ananjaypharma.co.in
+5. Vitamax - https://vitamax.co.in
+6. Parvati Sweetners and Power Limited - https://parvatisweetners.co.in
+7. Kalchuri Contractors Ltd. - https://kalchuricontractors.ltd

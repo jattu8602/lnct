@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
-import { cn } from "@/lib/utils"
-import { usePathname } from "next/navigation"
+import { cn } from '@/lib/utils'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,8 +22,8 @@ export default function Navbar() {
       }
     }
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   // Close mobile menu when route changes
@@ -32,20 +32,22 @@ export default function Navbar() {
   }, [pathname])
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Colleges", href: "/colleges" },
-    { name: "Events", href: "/events" },
-    { name: "Alumni", href: "/alumni" },
-    { name: "Admissions", href: "/admissions" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: 'Home', href: '/' },
+    { name: 'Colleges', href: '/colleges' },
+    { name: 'Events', href: '/events' },
+    { name: 'Alumni', href: '/alumni' },
+    { name: 'Admissions', href: '/admissions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ]
 
   return (
-    <nav className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-300",
-      isScrolled ? "bg-white/95 shadow-md backdrop-blur-sm" : "bg-white"
-    )}>
+    <nav
+      className={cn(
+        'fixed top-0 w-full z-50 transition-all duration-300',
+        isScrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-white'
+      )}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
@@ -66,8 +68,8 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors",
-                  pathname === link.href && "text-red-600 font-semibold"
+                  'text-gray-700 hover:text-red-600 px-3 py-2 text-sm font-medium transition-colors',
+                  pathname === link.href && 'text-red-600 font-semibold'
                 )}
               >
                 {link.name}
@@ -94,20 +96,22 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <div className={cn(
-        "md:hidden transition-all duration-300 ease-in-out overflow-hidden",
-        isOpen ? "max-h-screen" : "max-h-0"
-      )}>
+      <div
+        className={cn(
+          'md:hidden transition-all duration-300 ease-in-out overflow-hidden',
+          isOpen ? 'max-h-screen' : 'max-h-0'
+        )}
+      >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               className={cn(
-                "block px-3 py-2 rounded-md text-base font-medium transition-colors",
+                'block px-3 py-2 rounded-md text-base font-medium transition-colors',
                 pathname === link.href
-                  ? "text-red-600 bg-red-50 font-semibold"
-                  : "text-gray-700 hover:bg-gray-50 hover:text-red-600"
+                  ? 'text-red-600 bg-red-50 font-semibold'
+                  : 'text-gray-700 hover:bg-gray-50 hover:text-red-600'
               )}
             >
               {link.name}

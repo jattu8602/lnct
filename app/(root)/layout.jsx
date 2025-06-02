@@ -5,6 +5,7 @@ import Script from "next/script"
 import Navbar from "@/components/navbar"
 import ScrollIndicator from "@/components/scroll-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import Footer from "@/components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -41,9 +42,15 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           <main className="pt-20 min-h-screen">{children}</main>
+          <Footer />
           <ScrollIndicator />
         </ThemeProvider>
         <Script
