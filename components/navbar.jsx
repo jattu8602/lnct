@@ -33,11 +33,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Colleges', href: '/colleges' },
     { name: 'Events', href: '/events' },
-    { name: 'Alumni', href: '/alumni' },
-    { name: 'Admissions', href: '/admissions' },
     { name: 'About', href: '/about' },
+    { name: 'Map', href: '/map' },
+    { name: 'Alumni', href: '/alumni' },
     { name: 'Contact', href: '/contact' },
   ]
 
