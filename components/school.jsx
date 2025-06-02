@@ -1,18 +1,33 @@
 'use client'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight,MapPin, Phone, Globe } from 'lucide-react'
+import { ChevronLeft, ChevronRight, MapPin, Phone, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function School() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const schoolImages = [
-    '/placeholder.svg?height=400&width=600',
-    '/placeholder.svg?height=400&width=600',
-    '/placeholder.svg?height=400&width=600',
-    '/placeholder.svg?height=400&width=600',
-    '/placeholder.svg?height=400&width=600',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896778/link-generator/dmjz0duxdkwuurrtuebo.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896748/link-generator/hkoyxmye56nmhgr0s8pr.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896752/link-generator/lczivj3zk7t0dp8ccqrq.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896754/link-generator/dq5adjcgotmhj4toxvvt.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896756/link-generator/qygvrqzjqa9snem8uy5c.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896758/link-generator/lviajlp08bkhsau94oss.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896760/link-generator/wtj25oqgvybpl0nxofwc.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896761/link-generator/dn7swejq0rqcsmhinvty.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896763/link-generator/effoeaccrhf2zqxsjees.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896765/link-generator/thr0g3zrcsmvlknsuljl.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896766/link-generator/c97lfv50czeynnottj0x.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896773/link-generator/xrqw7chosk1wlc9n9vs5.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896774/link-generator/eszb0ude2hjy4wekflwo.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896776/link-generator/p34q2szs4vmkvnpi4jvm.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896777/link-generator/clhazdbkkd9adyefjd4i.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896780/link-generator/spxwezph2n2pj2jhjmem.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896782/link-generator/dl358isfss9ygq32zvhf.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896783/link-generator/od9ecw6scfnvafbq1ayp.jpg',
+    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896784/link-generator/zy19ts2krsmryrixylbe.jpg',
+    
   ]
 
   // Auto-rotate school images
@@ -22,7 +37,6 @@ export default function School() {
     }, 3000)
     return () => clearInterval(interval)
   }, [schoolImages.length])
-
 
   return (
     <div>
@@ -73,17 +87,24 @@ export default function School() {
               <div className="space-y-2">
                 <p className="flex items-center text-gray-600">
                   <MapPin className="w-4 h-4 mr-2 text-purple-600" />
-                  Kalchuri Nagar, Raisen Road, Bhopal, MP
+                  New Chouksey Nagar, Lambakhera, Berasia Road, Karond, Bhopal –
+                  462038
                 </p>
                 <p className="flex items-center text-gray-600">
                   <Phone className="w-4 h-4 mr-2 text-purple-600" />
-                  +91 755 4077111
+                  0755-6615640, 9109180266
                 </p>
               </div>
-              <Button className="bg-purple-600 hover:bg-purple-700">
-                <Globe className="w-4 h-4 mr-2" />
-                Visit School Website
-              </Button>
+              <a
+                href="https://www.lnctworldschools.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-purple-600 hover:bg-purple-700">
+                  <Globe className="w-4 h-4 mr-2" />
+                  Visit School Website
+                </Button>
+              </a>
             </div>
           </div>
         </div>
