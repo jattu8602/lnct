@@ -93,12 +93,14 @@ const LNCTHeroSection = () => {
       >
         {/* Background Image Container */}
         <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-black/10 flex items-center justify-center">
-            <div className="text-center text-white/50">
-              <div className="text-6xl mb-4">🏛️</div>
-              <p className="text-lg">Add your college images here</p>
-            </div>
-          </div>
+          <Image
+            src="https://res.cloudinary.com/doxmvuss9/image/upload/v1748885725/link-generator/ryvi2czxc1fb03w6uktq.webp"
+            alt="LNCT Background"
+            fill
+            className="object-cover md:object-fit w-full h-full"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/10"></div>
         </div>
 
         {/* Content */}
