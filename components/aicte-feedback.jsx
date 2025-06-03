@@ -152,7 +152,7 @@ export default function AICTEFeedback() {
 
                     {/* Content */}
                     <div className="absolute inset-0 p-4 flex flex-col justify-end">
-                      <h3 className="text-white font-bold text-lg mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 className="text-white font-bold text-lg mb-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300 ">
                         {item.title}
                       </h3>
 
