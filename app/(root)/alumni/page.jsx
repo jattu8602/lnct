@@ -17,9 +17,6 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 
-
-
-
 // Counter Animation Component
 const AnimatedCounter = ({ end, duration = 2000, suffix = '' }) => {
   const [count, setCount] = useState(0)
@@ -53,6 +50,14 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '' }) => {
 
 // Floating Confetti Component
 const FloatingConfetti = () => {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) return null
+
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {[...Array(20)].map((_, i) => (
@@ -60,13 +65,15 @@ const FloatingConfetti = () => {
           key={i}
           className="absolute w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
           initial={{
-            x: Math.random() * window.innerWidth,
+            x:
+              Math.random() *
+              (typeof window !== 'undefined' ? window.innerWidth : 0),
             y: -10,
             rotate: 0,
             opacity: 0.8,
           }}
           animate={{
-            y: window.innerHeight + 10,
+            y: typeof window !== 'undefined' ? window.innerHeight + 10 : 0,
             rotate: 360,
             opacity: 0,
           }}
