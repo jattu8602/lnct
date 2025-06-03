@@ -35,7 +35,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Events', href: '/events' },
-    { name: 'Map', href: '/map' },
+    // { name: 'Map', href: '/map' },
     { name: 'Alumni', href: '/alumni' },
     { name: 'Contact', href: '/contact' },
   ]
