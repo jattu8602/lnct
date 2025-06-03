@@ -17,6 +17,9 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 
+
+
+
 // Counter Animation Component
 const AnimatedCounter = ({ end, duration = 2000, suffix = '' }) => {
   const [count, setCount] = useState(0)
