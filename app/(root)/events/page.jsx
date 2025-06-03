@@ -5,11 +5,11 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 
 // Stack skeleton component
 const StackSkeleton = () => (
-  <div className="w-full animate-pulse">
+  <div className="w-full animate-pulse overflow-x-hidden">
     {/* Desktop Layout Skeleton */}
-    <div className="hidden md:block">
+    <div className="hidden md:block w-full">
       {/* Top row: Video + Shot skeleton */}
-      <div className="flex w-full h-[560px]">
+      <div className="flex w-full h-[560px] overflow-hidden">
         <div className="w-3/4 h-full bg-gray-200 flex items-center justify-center">
           <div className="flex flex-col items-center gap-3">
             <div className="w-12 h-12 border-3 border-gray-300 border-t-gray-500 rounded-full animate-spin"></div>
@@ -25,7 +25,7 @@ const StackSkeleton = () => (
       </div>
 
       {/* Bottom row: 4 images skeleton */}
-      <div className="flex w-full h-[200px]">
+      <div className="flex w-full h-[200px] overflow-hidden">
         {[1, 2, 3, 4].map((i) => (
           <div
             key={i}
@@ -38,7 +38,7 @@ const StackSkeleton = () => (
     </div>
 
     {/* Mobile Layout Skeleton */}
-    <div className="block md:hidden">
+    <div className="block md:hidden w-full">
       {/* Video skeleton */}
       <div className="w-full h-[250px] bg-gray-200 flex items-center justify-center">
         <div className="flex flex-col items-center gap-2">
@@ -48,7 +48,7 @@ const StackSkeleton = () => (
       </div>
 
       {/* Shot + 2 photos row skeleton */}
-      <div className="flex w-full h-[250px]">
+      <div className="flex w-full h-[250px] overflow-hidden">
         <div className="w-1/2 h-full bg-gray-300 flex items-center justify-center">
           <div className="w-6 h-6 border-2 border-gray-400 border-t-gray-600 rounded-full animate-spin"></div>
         </div>
@@ -63,7 +63,7 @@ const StackSkeleton = () => (
       </div>
 
       {/* Bottom 2 photos skeleton */}
-      <div className="flex w-full h-[150px]">
+      <div className="flex w-full h-[150px] overflow-hidden">
         <div className="w-1/2 h-full bg-gray-100 flex items-center justify-center">
           <div className="w-3 h-3 bg-gray-300 rounded"></div>
         </div>
@@ -203,10 +203,10 @@ export default function Gallery() {
   }, [hasMoreStacks, isLoadingMore, loadMoreStacks])
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       {/* Loading initial content */}
       {isLoading && (
-        <div className="space-y-0">
+        <div className="space-y-0 w-full">
           {[1, 2, 3].map((i) => (
             <StackSkeleton key={i} />
           ))}
@@ -217,42 +217,42 @@ export default function Gallery() {
       {!isLoading && (
         <>
           {loadedStacks.map((block) => (
-            <div key={block.id} className="w-full">
+            <div key={block.id} className="w-full overflow-x-hidden">
               {/* Desktop Layout */}
-              <div className="hidden md:block">
+              <div className="hidden md:block w-full">
                 {/* Top row: Video + Shot */}
-                <div className="flex w-full h-[560px]">
+                <div className="flex w-full h-[560px] overflow-hidden">
                   {!block.flip ? (
                     <>
-                      <div className="w-3/4 h-full">
+                      <div className="w-3/4 h-full overflow-hidden">
                         <GalleryItem
                           item={block.video}
                           type="video"
-                          customClass="!rounded-none !shadow-none !m-0"
+                          customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                         />
                       </div>
-                      <div className="w-1/4 h-full">
+                      <div className="w-1/4 h-full overflow-hidden">
                         <GalleryItem
                           item={block.shot}
                           type="shot"
-                          customClass="!rounded-none !shadow-none !m-0"
+                          customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                         />
                       </div>
                     </>
                   ) : (
                     <>
-                      <div className="w-1/4 h-full">
+                      <div className="w-1/4 h-full overflow-hidden">
                         <GalleryItem
                           item={block.shot}
                           type="shot"
-                          customClass="!rounded-none !shadow-none !m-0"
+                          customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                         />
                       </div>
-                      <div className="w-3/4 h-full">
+                      <div className="w-3/4 h-full overflow-hidden">
                         <GalleryItem
                           item={block.video}
                           type="video"
-                          customClass="!rounded-none !shadow-none !m-0"
+                          customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                         />
                       </div>
                     </>
@@ -260,13 +260,13 @@ export default function Gallery() {
                 </div>
 
                 {/* Bottom row: 4 images */}
-                <div className="flex w-full h-[200px]">
+                <div className="flex w-full h-[200px] overflow-hidden">
                   {block.photos.map((photo, idx) => (
-                    <div className="w-1/4 h-full" key={idx}>
+                    <div className="w-1/4 h-full overflow-hidden" key={idx}>
                       <GalleryItem
                         item={photo}
                         type="photo"
-                        customClass="!rounded-none !shadow-none !m-0"
+                        customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                       />
                     </div>
                   ))}
@@ -274,42 +274,42 @@ export default function Gallery() {
               </div>
 
               {/* Mobile Layout */}
-              <div className="block md:hidden">
+              <div className="block md:hidden w-full">
                 {/* Video full width */}
-                <div className="w-full h-[250px]">
+                <div className="w-full h-[250px] overflow-hidden">
                   <GalleryItem
                     item={block.video}
                     type="video"
-                    customClass="!rounded-none !shadow-none !m-0"
+                    customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                   />
                 </div>
 
                 {/* Shot + 2 vertical photos row */}
-                <div className="flex w-full h-[250px]">
+                <div className="flex w-full h-[250px] overflow-hidden">
                   {!block.flip ? (
                     <>
                       {/* Shot on left - 50% width */}
-                      <div className="w-1/2 h-full">
+                      <div className="w-1/2 h-full overflow-hidden">
                         <GalleryItem
                           item={block.shot}
                           type="shot"
-                          customClass="!rounded-none !shadow-none !m-0"
+                          customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                         />
                       </div>
                       {/* 2 vertical photos on right - 50% width total */}
-                      <div className="w-1/2 h-full flex flex-col">
-                        <div className="w-full h-1/2">
+                      <div className="w-1/2 h-full flex flex-col overflow-hidden">
+                        <div className="w-full h-1/2 overflow-hidden">
                           <GalleryItem
                             item={block.photos[0]}
                             type="photo"
-                            customClass="!rounded-none !shadow-none !m-0"
+                            customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                           />
                         </div>
-                        <div className="w-full h-1/2">
+                        <div className="w-full h-1/2 overflow-hidden">
                           <GalleryItem
                             item={block.photos[1]}
                             type="photo"
-                            customClass="!rounded-none !shadow-none !m-0"
+                            customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                           />
                         </div>
                       </div>
@@ -317,28 +317,28 @@ export default function Gallery() {
                   ) : (
                     <>
                       {/* 2 vertical photos on left - 50% width total */}
-                      <div className="w-1/2 h-full flex flex-col">
-                        <div className="w-full h-1/2">
+                      <div className="w-1/2 h-full flex flex-col overflow-hidden">
+                        <div className="w-full h-1/2 overflow-hidden">
                           <GalleryItem
                             item={block.photos[0]}
                             type="photo"
-                            customClass="!rounded-none !shadow-none !m-0"
+                            customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                           />
                         </div>
-                        <div className="w-full h-1/2">
+                        <div className="w-full h-1/2 overflow-hidden">
                           <GalleryItem
                             item={block.photos[1]}
                             type="photo"
-                            customClass="!rounded-none !shadow-none !m-0"
+                            customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                           />
                         </div>
                       </div>
                       {/* Shot on right - 50% width */}
-                      <div className="w-1/2 h-full">
+                      <div className="w-1/2 h-full overflow-hidden">
                         <GalleryItem
                           item={block.shot}
                           type="shot"
-                          customClass="!rounded-none !shadow-none !m-0"
+                          customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                         />
                       </div>
                     </>
@@ -346,19 +346,19 @@ export default function Gallery() {
                 </div>
 
                 {/* Bottom 2 photos row */}
-                <div className="flex w-full h-[150px]">
-                  <div className="w-1/2 h-full">
+                <div className="flex w-full h-[150px] overflow-hidden">
+                  <div className="w-1/2 h-full overflow-hidden">
                     <GalleryItem
                       item={block.photos[2]}
                       type="photo"
-                      customClass="!rounded-none !shadow-none !m-0"
+                      customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                     />
                   </div>
-                  <div className="w-1/2 h-full">
+                  <div className="w-1/2 h-full overflow-hidden">
                     <GalleryItem
                       item={block.photos[3]}
                       type="photo"
-                      customClass="!rounded-none !shadow-none !m-0"
+                      customClass="!rounded-none !shadow-none !m-0 w-full h-full"
                     />
                   </div>
                 </div>

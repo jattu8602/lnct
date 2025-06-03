@@ -116,7 +116,36 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Ensure proper text scaling on mobile */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-background text-foreground;
+    /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Ensure body takes full width without overflowing */
+    width: 100%;
+    max-width: 100vw;
+    /* Prevent iOS bounce scrolling */
+    -webkit-overflow-scrolling: touch;
   }
+
+  /* Prevent any element from causing horizontal scroll */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Ensure containers don't overflow */
+  .container,
+  [class*="max-w"] {
+    max-width: 100%;
+  }
+
+
 }

@@ -1,203 +1,301 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Image from "next/image"
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
-export default function EventsPage() {
-  const upcomingEvents = [
+export default function ContactPage() {
+  const contactInfo = [
     {
-      title: "TechVista 2025",
-      date: "July 15-17, 2025",
-      location: "Main Campus Auditorium",
-      description:
-        "Annual technical symposium featuring workshops, competitions, and guest lectures from industry experts.",
-      image: "/placeholder.svg?height=300&width=500",
+      icon: <MapPin className="h-6 w-6" />,
+      title: 'Address',
+      details: [
+        'LNCT Group of Colleges',
+        'Raisen Road, Bhopal',
+        'Madhya Pradesh 462021, India',
+      ],
     },
     {
-      title: "Cultural Fest 'Rhythm'",
-      date: "September 5-7, 2025",
-      location: "LNCT Open Air Theatre",
-      description: "A celebration of art, music, dance, and drama with performances from students across colleges.",
-      image: "/placeholder.svg?height=300&width=500",
+      icon: <Phone className="h-6 w-6" />,
+      title: 'Phone',
+      details: [
+        '+91-755-2616200',
+        '+91-755-2616201',
+        'Toll Free: 1800-123-4567',
+      ],
     },
     {
-      title: "National Conference on AI",
-      date: "August 12-13, 2025",
-      location: "Research Center",
-      description: "Research conference on artificial intelligence and machine learning with paper presentations.",
-      image: "/placeholder.svg?height=300&width=500",
+      icon: <Mail className="h-6 w-6" />,
+      title: 'Email',
+      details: [
+        'info@lnct.ac.in',
+        'admissions@lnct.ac.in',
+        'support@lnct.ac.in',
+      ],
+    },
+    {
+      icon: <Clock className="h-6 w-6" />,
+      title: 'Office Hours',
+      details: [
+        'Monday - Friday: 9:00 AM - 6:00 PM',
+        'Saturday: 9:00 AM - 2:00 PM',
+        'Sunday: Closed',
+      ],
     },
   ]
 
-  const pastEvents = [
+  const departments = [
     {
-      title: "Hackathon 2024",
-      date: "February 10-12, 2024",
-      location: "Computer Science Block",
-      description: "48-hour coding competition where students developed innovative solutions for real-world problems.",
-      image: "/placeholder.svg?height=300&width=500",
+      name: 'Admissions Office',
+      phone: '+91-755-2616200',
+      email: 'admissions@lnct.ac.in',
+      timings: 'Mon-Sat: 9:00 AM - 5:00 PM',
     },
     {
-      title: "Alumni Meet 2024",
-      date: "January 20, 2024",
-      location: "LNCT Convention Center",
-      description: "Annual gathering of alumni to reconnect, network, and share experiences with current students.",
-      image: "/placeholder.svg?height=300&width=500",
+      name: 'Academic Office',
+      phone: '+91-755-2616201',
+      email: 'academic@lnct.ac.in',
+      timings: 'Mon-Fri: 9:00 AM - 6:00 PM',
     },
     {
-      title: "Sports Tournament",
-      date: "November 5-15, 2023",
-      location: "LNCT Sports Complex",
-      description: "Inter-college sports competition featuring cricket, football, basketball, and athletics.",
-      image: "/placeholder.svg?height=300&width=500",
+      name: 'Student Affairs',
+      phone: '+91-755-2616202',
+      email: 'student.affairs@lnct.ac.in',
+      timings: 'Mon-Fri: 9:00 AM - 5:00 PM',
+    },
+    {
+      name: 'Hostel Office',
+      phone: '+91-755-2616203',
+      email: 'hostel@lnct.ac.in',
+      timings: '24/7 Support Available',
     },
   ]
 
   return (
-    <div className="py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-12 w-full overflow-x-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Events & Activities</h1>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            LNCT hosts a variety of academic, cultural, and technical events throughout the year to enrich the student
-            experience.
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+            Contact Us
+          </h1>
+          <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base break-words">
+            Get in touch with LNCT Group of Colleges. We're here to help with
+            admissions, academic queries, and any other information you need.
           </p>
         </div>
 
-        <Tabs defaultValue="upcoming" className="mb-16">
-          <div className="flex justify-center mb-8">
-            <TabsList>
-              <TabsTrigger value="upcoming">Upcoming Events</TabsTrigger>
-              <TabsTrigger value="past">Past Events</TabsTrigger>
-            </TabsList>
+        {/* Contact Information Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-16 w-full">
+          {contactInfo.map((info, index) => (
+            <Card
+              key={index}
+              className="text-center hover:shadow-lg transition-shadow w-full"
+            >
+              <CardContent className="p-4 sm:p-6 w-full">
+                <div className="flex justify-center mb-4 text-red-600">
+                  {info.icon}
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold mb-3">
+                  {info.title}
+                </h3>
+                <div className="space-y-1 w-full">
+                  {info.details.map((detail, idx) => (
+                    <p
+                      key={idx}
+                      className="text-gray-600 text-sm sm:text-base break-words"
+                    >
+                      {detail}
+                    </p>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-16 w-full">
+          {/* Contact Form */}
+          <div className="w-full">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+              Send us a Message
+            </h2>
+            <form className="space-y-6 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                <div className="w-full">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div className="w-full">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="w-full">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  required
+                />
+              </div>
+
+              <div className="w-full">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                />
+              </div>
+
+              <div className="w-full">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Subject
+                </label>
+                <select
+                  id="subject"
+                  name="subject"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  required
+                >
+                  <option value="">Select a subject</option>
+                  <option value="admissions">Admissions Inquiry</option>
+                  <option value="academic">Academic Information</option>
+                  <option value="campus">Campus Visit</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div className="w-full">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-vertical"
+                  required
+                ></textarea>
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full bg-red-600 hover:bg-red-700"
+              >
+                Send Message
+              </Button>
+            </form>
           </div>
 
-          <TabsContent value="upcoming">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {upcomingEvents.map((event, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="h-48 relative">
-                    <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-3">
-                      <h2 className="text-xl font-bold">{event.title}</h2>
-                    </div>
-                    <div className="mb-4">
-                      <div className="text-sm text-gray-500 mb-1">
-                        <span className="font-medium text-gray-700">Date:</span> {event.date}
+          {/* Department Contacts */}
+          <div className="w-full">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+              Department Contacts
+            </h2>
+            <div className="space-y-4 w-full">
+              {departments.map((dept, index) => (
+                <Card key={index} className="w-full">
+                  <CardContent className="p-4 sm:p-6 w-full">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 break-words">
+                      {dept.name}
+                    </h3>
+                    <div className="space-y-2 w-full">
+                      <div className="flex items-center gap-2">
+                        <Phone className="h-4 w-4 text-red-600 flex-shrink-0" />
+                        <span className="text-gray-600 text-sm sm:text-base break-words">
+                          {dept.phone}
+                        </span>
                       </div>
-                      <div className="text-sm text-gray-500">
-                        <span className="font-medium text-gray-700">Location:</span> {event.location}
+                      <div className="flex items-center gap-2">
+                        <Mail className="h-4 w-4 text-red-600 flex-shrink-0" />
+                        <span className="text-gray-600 text-sm sm:text-base break-words">
+                          {dept.email}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-red-600 flex-shrink-0" />
+                        <span className="text-gray-600 text-sm sm:text-base break-words">
+                          {dept.timings}
+                        </span>
                       </div>
                     </div>
-                    <p className="text-gray-600 mb-4">{event.description}</p>
-                    <Button variant="outline" className="w-full">
-                      Register Now
-                    </Button>
                   </CardContent>
                 </Card>
               ))}
             </div>
-          </TabsContent>
+          </div>
+        </div>
 
-          <TabsContent value="past">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pastEvents.map((event, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="h-48 relative">
-                    <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
-                    <div className="absolute top-0 right-0 bg-gray-800 text-white px-3 py-1 text-sm">Past Event</div>
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-3">
-                      <h2 className="text-xl font-bold">{event.title}</h2>
-                    </div>
-                    <div className="mb-4">
-                      <div className="text-sm text-gray-500 mb-1">
-                        <span className="font-medium text-gray-700">Date:</span> {event.date}
-                      </div>
-                      <div className="text-sm text-gray-500">
-                        <span className="font-medium text-gray-700">Location:</span> {event.location}
-                      </div>
-                    </div>
-                    <p className="text-gray-600 mb-4">{event.description}</p>
-                    <Button variant="outline" className="w-full">
-                      View Gallery
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-
-        <div className="bg-gray-50 rounded-xl p-8 mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Host Your Event at LNCT</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              LNCT offers state-of-the-art venues and facilities for hosting conferences, workshops, and other events.
+        {/* Map Section */}
+        <div className="bg-gray-50 rounded-xl p-4 sm:p-6 lg:p-8 mb-16 w-full overflow-x-hidden">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+            Find Us
+          </h2>
+          <div className="w-full h-64 sm:h-80 lg:h-96 bg-gray-200 rounded-lg flex items-center justify-center">
+            <p className="text-gray-500 text-center break-words">
+              Interactive Map Coming Soon
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Available Venues</h3>
-              <ul className="space-y-3">
-                {[
-                  "Main Auditorium (Capacity: 1000)",
-                  "Conference Hall (Capacity: 300)",
-                  "Open Air Theatre (Capacity: 2000)",
-                  "Seminar Halls (Capacity: 150 each)",
-                  "Smart Classrooms (Capacity: 60 each)",
-                ].map((venue, index) => (
-                  <li key={index} className="flex items-center">
-                    <span className="w-2 h-2 bg-red-600 rounded-full mr-2"></span>
-                    {venue}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Services Provided</h3>
-              <ul className="space-y-3">
-                {[
-                  "Audio-Visual Equipment",
-                  "High-Speed Internet",
-                  "Catering Services",
-                  "Event Management Support",
-                  "Accommodation for Guests",
-                  "Transportation Facilities",
-                ].map((service, index) => (
-                  <li key={index} className="flex items-center">
-                    <span className="w-2 h-2 bg-red-600 rounded-full mr-2"></span>
-                    {service}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
-            <Button className="bg-red-600 hover:bg-red-700">Inquire About Venue Booking</Button>
+          <div className="text-center mt-6">
+            <Button className="bg-red-600 hover:bg-red-700 w-full sm:w-auto">
+              Get Directions
+            </Button>
           </div>
         </div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-            Subscribe to our newsletter to receive updates about upcoming events and activities.
+        {/* FAQ Section */}
+        <div className="text-center w-full">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto mb-8 text-sm sm:text-base break-words">
+            Have questions? Check out our FAQ section or contact us directly for
+            more information.
           </p>
-          <div className="max-w-md mx-auto">
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              />
-              <Button>Subscribe</Button>
-            </div>
-          </div>
+          <Button variant="outline" className="w-full sm:w-auto">
+            View FAQ
+          </Button>
         </div>
       </div>
     </div>

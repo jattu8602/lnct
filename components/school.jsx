@@ -27,7 +27,6 @@ export default function School() {
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896782/link-generator/dl358isfss9ygq32zvhf.jpg',
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896783/link-generator/od9ecw6scfnvafbq1ayp.jpg',
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896784/link-generator/zy19ts2krsmryrixylbe.jpg',
-    
   ]
 
   // Auto-rotate school images

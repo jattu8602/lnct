@@ -10,7 +10,6 @@ import WhyLNCT from '@/components/why-lnct'
 import ResearchDevelopment from '@/components/research-development'
 import BlogPosts from '@/components/blog-posts'
 import AICTEFeedback from '@/components/aicte-feedback'
-import Gallery from '@/components/gallery'
 import School from '@/components/school'
 import CampusLife from '@/components/campuslife'
 
