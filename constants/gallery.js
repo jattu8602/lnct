@@ -43,34 +43,6 @@ export const shots = [
 
 export const photos = [
   {
-    id: 1,
-    title: 'Sunset Beach',
-    description: 'Beautiful sunset at the beach',
-    tags: ['sunset', 'beach', 'ocean'],
-    hashtags: ['#sunset', '#beach', '#ocean', '#golden'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935515/link-generator/lzuuoc38uszmea1gc8wy.jpg',
-  },
-  {
-    id: 2,
-    title: 'Mountain Peak',
-    description: 'Snow-capped mountain peak',
-    tags: ['mountain', 'snow', 'peak'],
-    hashtags: ['#mountain', '#snow', '#adventure'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935516/link-generator/uoznnq12a8ak7qe1kiz1.jpg',
-  },
-  {
-    id: 3,
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935517/link-generator/ztzehafinbkuejh5pgqm.jpg',
-  },
-  {
-    id: 4,
-    title: 'Forest Path',
-    description: 'Peaceful forest walking path',
-    tags: ['forest', 'nature', 'path'],
-    hashtags: ['#forest', '#nature', '#peaceful'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935773/link-generator/kgpid4muemc2ghwrhhss.jpg',
-  },
-  {
     id: 5,
     title: 'Forest Path',
     description: 'Peaceful forest walking path',
@@ -101,6 +73,35 @@ export const photos = [
     tags: ['forest', 'nature', 'path'],
     hashtags: ['#forest', '#nature', '#peaceful'],
     url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748937653/link-generator/jfyysdmwcblyjzwj8qfq.jpg',
+  },
+
+  {
+    id: 1,
+    title: 'Sunset Beach',
+    description: 'Beautiful sunset at the beach',
+    tags: ['sunset', 'beach', 'ocean'],
+    hashtags: ['#sunset', '#beach', '#ocean', '#golden'],
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935515/link-generator/lzuuoc38uszmea1gc8wy.jpg',
+  },
+  {
+    id: 2,
+    title: 'Mountain Peak',
+    description: 'Snow-capped mountain peak',
+    tags: ['mountain', 'snow', 'peak'],
+    hashtags: ['#mountain', '#snow', '#adventure'],
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935516/link-generator/uoznnq12a8ak7qe1kiz1.jpg',
+  },
+  {
+    id: 3,
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935517/link-generator/ztzehafinbkuejh5pgqm.jpg',
+  },
+  {
+    id: 4,
+    title: 'Forest Path',
+    description: 'Peaceful forest walking path',
+    tags: ['forest', 'nature', 'path'],
+    hashtags: ['#forest', '#nature', '#peaceful'],
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935773/link-generator/kgpid4muemc2ghwrhhss.jpg',
   },
   {
     id: 9,

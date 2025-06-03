@@ -93,35 +93,67 @@ export default function Gallery() {
 
             {/* Shot + 2 vertical photos row */}
             <div className="flex w-full h-[250px]">
-              {/* Shot - 50% width */}
-              <div className="w-1/2 h-full">
-                <GalleryItem
-                  item={block.shot}
-                  type="shot"
-                  customClass="!rounded-none !shadow-none !m-0"
-                />
-              </div>
-              {/* 2 vertical photos - 50% width total */}
-              <div className="w-1/2 h-full flex flex-col">
-                <div className="w-full h-1/2">
-                  <GalleryItem
-                    item={block.photos[0]}
-                    type="photo"
-                    customClass="!rounded-none !shadow-none !m-0"
-                  />
-                </div>
-                <div className="w-full h-1/2">
-                  <GalleryItem
-                    item={block.photos[1]}
-                    type="photo"
-                    customClass="!rounded-none !shadow-none !m-0"
-                  />
-                </div>
-              </div>
+              {!block.flip ? (
+                <>
+                  {/* Shot on left - 50% width */}
+                  <div className="w-1/2 h-full">
+                    <GalleryItem
+                      item={block.shot}
+                      type="shot"
+                      customClass="!rounded-none !shadow-none !m-0"
+                    />
+                  </div>
+                  {/* 2 vertical photos on right - 50% width total */}
+                  <div className="w-1/2 h-full flex flex-col">
+                    <div className="w-full h-1/2">
+                      <GalleryItem
+                        item={block.photos[0]}
+                        type="photo"
+                        customClass="!rounded-none !shadow-none !m-0"
+                      />
+                    </div>
+                    <div className="w-full h-1/2">
+                      <GalleryItem
+                        item={block.photos[1]}
+                        type="photo"
+                        customClass="!rounded-none !shadow-none !m-0"
+                      />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  {/* 2 vertical photos on left - 50% width total */}
+                  <div className="w-1/2 h-full flex flex-col">
+                    <div className="w-full h-1/2">
+                      <GalleryItem
+                        item={block.photos[0]}
+                        type="photo"
+                        customClass="!rounded-none !shadow-none !m-0"
+                      />
+                    </div>
+                    <div className="w-full h-1/2">
+                      <GalleryItem
+                        item={block.photos[1]}
+                        type="photo"
+                        customClass="!rounded-none !shadow-none !m-0"
+                      />
+                    </div>
+                  </div>
+                  {/* Shot on right - 50% width */}
+                  <div className="w-1/2 h-full">
+                    <GalleryItem
+                      item={block.shot}
+                      type="shot"
+                      customClass="!rounded-none !shadow-none !m-0"
+                    />
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Bottom 2 photos row */}
-            <div className="flex w-full h-[125px]">
+            <div className="flex w-full h-[150px]">
               <div className="w-1/2 h-full">
                 <GalleryItem
                   item={block.photos[2]}
