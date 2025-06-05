@@ -11,7 +11,7 @@ export default function School() {
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896778/link-generator/dmjz0duxdkwuurrtuebo.jpg',
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896748/link-generator/hkoyxmye56nmhgr0s8pr.jpg',
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896752/link-generator/lczivj3zk7t0dp8ccqrq.jpg',
-    'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896754/link-generator/dq5adjcgotmhj4toxvvt.jpg',
+'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896754/link-generator/dq5adjcgotmhj4toxvvt.jpg',
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896756/link-generator/qygvrqzjqa9snem8uy5c.jpg',
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896758/link-generator/lviajlp08bkhsau94oss.jpg',
     'https://res.cloudinary.com/doxmvuss9/image/upload/v1748896760/link-generator/wtj25oqgvybpl0nxofwc.jpg',
