@@ -136,13 +136,7 @@ Hello LNCT Team,
 
 I hope you're doing well. I am interested in learning more about your institution.
 
-Name: ${formData.name}
-Email: ${formData.email}
-
-Subject: ${formData.subject}
-
-Message:
-${formData.message}
+My Name is: ${formData.name} and ${formData.message}
 
 Thank you for your assistance.
 
