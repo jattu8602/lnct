@@ -130,19 +130,37 @@ export default function ContactPage() {
 
     if (!validateForm()) return
 
-    setIsSubmitting(true)
+    // Create email body with form data
+    const emailBody = `
+Hello LNCT Team,
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+I hope you're doing well. I am interested in learning more about your institution.
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+Name: ${formData.name}
+Email: ${formData.email}
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 3000)
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+
+Thank you for your assistance.
+
+Best regards,
+${formData.name}
+${formData.email}
+`
+
+    // Encode the email body and subject
+    const encodedSubject = encodeURIComponent(formData.subject)
+    const encodedBody = encodeURIComponent(emailBody)
+
+    // Redirect to mail app with pre-filled data
+    window.location.href = `mailto:info@lnct.ac.in?subject=${encodedSubject}&body=${encodedBody}`
+
+    // Reset form
+    setFormData({ name: '', email: '', subject: '', message: '' })
+    setErrors({})
   }
 
   const handleInputChange = (field, value) => {
@@ -764,7 +782,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Interactive Map */}
+      {/* LNCT 3D Virtual Tour */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
@@ -774,10 +792,12 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Find Us</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Explore Our Campus
+            </h2>
             <p className="text-xl text-gray-600">
-              Located in the heart of Bhopal, easily accessible from all parts
-              of the city
+              Take a virtual 3D tour of LNCT and experience the campus like
+              never before
             </p>
           </motion.div>
 
@@ -788,22 +808,23 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
-            <div className="h-96 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+            <div className="h-96 bg-gradient-to-br from-indigo-100 to-violet-100 flex items-center justify-center">
+              <div className="text-center px-4">
+                <MapPin className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Interactive Map
+                  LNCT 3D Virtual Tour
                 </h3>
                 <p className="text-gray-600">
-                  Click to view our location on Google Maps
+                  Discover classrooms, labs, auditoriums, and more with a fully
+                  immersive experience
                 </p>
                 <Button
                   className="mt-4"
                   onClick={() =>
-                    window.open('https://maps.google.com', '_blank')
+                    window.open('https://tour.lnct.ac.in/LNCT/', '_blank')
                   }
                 >
-                  Open in Google Maps
+                  Start Virtual Tour
                   <ExternalLink className="w-4 h-4 ml-2" />
                 </Button>
               </div>
@@ -879,14 +900,27 @@ export default function ContactPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button
-                  size="lg"
-                  className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4"
+                <a
+                  href="mailto:info@lnct.ac.in"
+                  onClick={(e) => {
+                    // Fallback for devices that don't support mailto:
+                    if (!window.location.protocol.includes('mailto:')) {
+                      e.preventDefault()
+                      window.location.href = 'mailto:info@lnct.ac.in'
+                    }
+                  }}
+                  className="inline-block"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Email Us
-                </Button>
+                  <Button
+                    className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4"
+                    size="lg"
+                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    Email Us
+                  </Button>
+                </a>
               </motion.div>
+
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -895,6 +929,12 @@ export default function ContactPage() {
                   size="lg"
                   variant="outline"
                   className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4"
+                  onClick={() =>
+                    window.open(
+                      'https://www.google.com/maps/search/?api=1&query=LNCT+Bhopal+Kalchuri+Nagar+Raisen+Road+Bhopal',
+                      '_blank'
+                    )
+                  }
                 >
                   <MapPin className="w-5 h-5 mr-2" />
                   Visit Us
