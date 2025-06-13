@@ -40,35 +40,38 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const campuses = [
-    {
-      name: 'LNCT Main Campus',
-      address: 'Kalchuri Nagar, Raisen Road, Bhopal - 462022',
-      phone: '+91-755-2740800',
-      email: 'info@lnct.ac.in',
-      mapLink: 'https://maps.google.com',
-      icon: Building,
-      color: 'from-blue-500 to-blue-600',
-    },
-    {
-      name: 'LNCTE',
-      address: 'Kalchuri Nagar, Raisen Road, Bhopal - 462022',
-      phone: '+91-755-2740900',
-      email: 'info@lncte.ac.in',
-      mapLink: 'https://maps.google.com',
-      icon: Users,
-      color: 'from-purple-500 to-purple-600',
-    },
-    {
-      name: 'LNCT University',
-      address: 'Kalchuri Nagar, Raisen Road, Bhopal - 462022',
-      phone: '+91-755-2741000',
-      email: 'info@lnctuniversity.ac.in',
-      mapLink: 'https://maps.google.com',
-      icon: MessageSquare,
-      color: 'from-green-500 to-green-600',
-    },
-  ]
+ const campuses = [
+   {
+     name: 'LNCT Main Campus',
+     address: 'Kalchuri Nagar, Raisen Road, Bhopal - 462022',
+     phone: '+91-755-2740800',
+     email: 'info@lnct.ac.in',
+     mapLink:
+       'https://www.google.com/maps/place/LNCT+Group+of+Colleges,+Bhopal/@23.251389,77.528703,17z',
+     icon: Building,
+     color: 'from-blue-500 to-blue-600',
+   },
+   {
+     name: 'LNCTE',
+     address: 'Kalchuri Nagar, Raisen Road, Bhopal - 462022',
+     phone: '+91-755-2740900',
+     email: 'info@lncte.ac.in',
+     mapLink:
+       'https://www.google.com/maps/search/LNCTE+Bhopal/@23.2514,77.5290,17z',
+     icon: Users,
+     color: 'from-purple-500 to-purple-600',
+   },
+   {
+     name: 'LNCT University',
+     address: 'J.K. Town, C-Sector, Sarvadharma, Kolar Road, Bhopal - 462042',
+     phone: '+91-755-4049666',
+     email: 'info@lnctuniversity.ac.in',
+     mapLink:
+       'https://www.google.com/maps/place/LNCT+University+Bhopal/@23.2519,77.4775,17z',
+     icon: MessageSquare,
+     color: 'from-green-500 to-green-600',
+   },
+ ]
 
   const faqs = [
     {
@@ -762,7 +765,7 @@ ${formData.email}
 
                     <Button
                       variant="outline"
-                      className="w-full mt-6 hover:bg-gray-50"
+                      className="w-full mt-6 hover:bg-gray-50 cursor-pointer"
                       onClick={() => window.open(campus.mapLink, '_blank')}
                     >
                       View on Map
