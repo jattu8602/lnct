@@ -53,19 +53,19 @@ export const eminentAlumni = {
         'Chemical Engineering Graduate',
       ],
     },
-    {
-      name: 'Ms. Ayushi Jain',
-      position: 'S.D.O. (Sub Divisional Officer)',
-      company: 'Nazira, Assam',
-      batch: '2014',
-      department: 'CSE',
-      image:
-        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930006/link-generator/qsep4qhguh33iwc1uknj.jpg',
-      achievements: [
-        'Indian Administrative Service (IAS)',
-        'Sub Divisional Officer at Nazira, Assam',
-      ],
-    },
+    // {
+    //   name: 'Ms. Ayushi Jain',
+    //   position: 'S.D.O. (Sub Divisional Officer)',
+    //   company: 'Nazira, Assam',
+    //   batch: '2014',
+    //   department: 'CSE',
+    //   image:
+    //     'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930006/link-generator/qsep4qhguh33iwc1uknj.jpg',
+    //   achievements: [
+    //     'Indian Administrative Service (IAS)',
+    //     'Sub Divisional Officer at Nazira, Assam',
+    //   ],
+    // },
     {
       name: 'Mr. Ankit Jaiswal',
       position: 'SP (Superintendent of Police)',
