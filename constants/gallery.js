@@ -22,8 +22,9 @@ export const videos = [
     description: 'Calming water scenes',
     tags: ['water', 'peaceful'],
     hashtags: ['#water', '#peaceful', '#meditation'],
-    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/c192f638-7a0c-467a-86b6-b4b5f0c5ba90.mp4',
+    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/63ffdbda-1334-4a84-9ea8-ab5b0d98f843.mp4',
   },
+
   {
     id: 4,
     title: 'Mountain Views',
@@ -46,7 +47,7 @@ export const videos = [
     description: 'Relaxing ocean wave footage',
     tags: ['ocean', 'waves'],
     hashtags: ['#ocean', '#waves', '#relaxing'],
-    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/15e62424-4ade-40bb-ad16-a41d30185137.mp4',
+    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/63ffdbda-1334-4a84-9ea8-ab5b0d98f843.mp4',
   },
   {
     id: 7,
@@ -89,7 +90,7 @@ export const shots = [
     description: 'Detailed macro cinematography',
     tags: ['macro', 'artistic'],
     hashtags: ['#macro', '#artistic', '#details'],
-    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/c9c9d529-616d-4ee1-bb14-2a270bb9b26a.mp4',
+    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/6e431122-3522-4950-9b53-867996796b3c.mp4',
   },
   {
     id: 4,
@@ -97,7 +98,7 @@ export const shots = [
     description: 'Moody atmospheric cinematography',
     tags: ['atmospheric', 'moody'],
     hashtags: ['#atmospheric', '#moody', '#cinematic'],
-    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/a2946749-be17-4097-a790-9698badb4ae9.mp4',
+    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/c122687c-8208-48da-b28d-e797510af5b4.mp4',
   },
   {
     id: 5,
@@ -105,7 +106,7 @@ export const shots = [
     description: 'Creative urban viewpoints',
     tags: ['urban', 'perspective'],
     hashtags: ['#urban', '#perspective', '#creative'],
-    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/c9c9d529-616d-4ee1-bb14-2a270bb9b26a.mp4',
+    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/6744527d-13df-41e3-8714-d6c386c2afcc.mp4',
   },
   {
     id: 6,
@@ -113,7 +114,7 @@ export const shots = [
     description: 'Focus on natural textures',
     tags: ['nature', 'textures'],
     hashtags: ['#nature', '#textures', '#organic'],
-    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/a2946749-be17-4097-a790-9698badb4ae9.mp4',
+    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/3dffc5b0-7dcb-4971-9b83-3756e6b5a61e.mp4',
   },
   {
     id: 7,
@@ -121,15 +122,16 @@ export const shots = [
     description: 'Creative lighting techniques',
     tags: ['lighting', 'creative'],
     hashtags: ['#lighting', '#creative', '#artistic'],
-    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/c9c9d529-616d-4ee1-bb14-2a270bb9b26a.mp4',
+    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/6e431122-3522-4950-9b53-867996796b3c.mp4',
   },
+
   {
     id: 8,
     title: 'Emotional Moments',
     description: 'Capturing genuine emotions',
     tags: ['emotions', 'portraits'],
     hashtags: ['#emotions', '#portraits', '#genuine'],
-    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/a2946749-be17-4097-a790-9698badb4ae9.mp4',
+    url: 'https://files.edgestore.dev/r7t8qow2hwrnycyu/jatin/_public/05f38762-c4c8-4354-b355-6ef4151b1a8d.mp4',
   },
 ]
 
@@ -141,7 +143,7 @@ export const photos = [
     description: 'Beautiful sunset at the beach with golden reflections',
     tags: ['sunset', 'beach', 'ocean'],
     hashtags: ['#sunset', '#beach', '#ocean', '#golden'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935515/link-generator/lzuuoc38uszmea1gc8wy.jpg',
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1749908952/link-generator/cjsu2c7g0mmwohwh0xpy.jpg',
   },
   {
     id: 2,
@@ -157,7 +159,7 @@ export const photos = [
     description: 'Crystal clear lake reflection',
     tags: ['lake', 'reflection', 'serene'],
     hashtags: ['#lake', '#reflection', '#peaceful'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935517/link-generator/ztzehafinbkuejh5pgqm.jpg',
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1749908950/link-generator/pll8r4ktbnjsxyarpbjm.jpg',
   },
   {
     id: 4,
@@ -209,7 +211,7 @@ export const photos = [
     description: 'Spectacular coastal sunset with dramatic clouds',
     tags: ['sunset', 'coast', 'dramatic'],
     hashtags: ['#sunset', '#coast', '#dramatic'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935515/link-generator/lzuuoc38uszmea1gc8wy.jpg',
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1749908957/link-generator/blgksvakigblocnp7ziz.jpg',
   },
   {
     id: 10,
@@ -217,7 +219,7 @@ export const photos = [
     description: 'Expansive alpine mountain range view',
     tags: ['mountain', 'alpine', 'range'],
     hashtags: ['#mountain', '#alpine', '#majestic'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935516/link-generator/uoznnq12a8ak7qe1kiz1.jpg',
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1749908963/link-generator/ycrycurmragjkjmapyo5.jpg',
   },
   {
     id: 11,
@@ -225,7 +227,7 @@ export const photos = [
     description: 'Perfect mirror reflection on calm lake',
     tags: ['lake', 'mirror', 'calm'],
     hashtags: ['#lake', '#mirror', '#calm'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935517/link-generator/ztzehafinbkuejh5pgqm.jpg',
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1749908965/link-generator/cakyysw0lzpmncaifzel.jpg',
   },
   {
     id: 12,
@@ -233,8 +235,26 @@ export const photos = [
     description: 'Ancient trees forming natural archway',
     tags: ['forest', 'ancient', 'pathway'],
     hashtags: ['#forest', '#ancient', '#mystical'],
-    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1748935773/link-generator/kgpid4muemc2ghwrhhss.jpg',
+    url: 'https://res.cloudinary.com/doxmvuss9/image/upload/v1749908971/link-generator/a5t5o3p5qiomgztgancd.jpg',
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Stack 4 photos (13-16)
   {
