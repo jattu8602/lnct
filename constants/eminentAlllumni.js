@@ -53,19 +53,19 @@ export const eminentAlumni = {
         'Chemical Engineering Graduate',
       ],
     },
-    // {
-    //   name: 'Ms. Ayushi Jain',
-    //   position: 'S.D.O. (Sub Divisional Officer)',
-    //   company: 'Nazira, Assam',
-    //   batch: '2014',
-    //   department: 'CSE',
-    //   image:
-    //     'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930006/link-generator/qsep4qhguh33iwc1uknj.jpg',
-    //   achievements: [
-    //     'Indian Administrative Service (IAS)',
-    //     'Sub Divisional Officer at Nazira, Assam',
-    //   ],
-    // },
+    {
+      name: 'Ms. Ayushi Jain',
+      position: 'S.D.O. (Sub Divisional Officer)',
+      company: 'Nazira, Assam',
+      batch: '2014',
+      department: 'CSE',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930006/link-generator/qsep4qhguh33iwc1uknj.jpg',
+      achievements: [
+        'Indian Administrative Service (IAS)',
+        'Sub Divisional Officer at Nazira, Assam',
+      ],
+    },
     {
       name: 'Mr. Ankit Jaiswal',
       position: 'SP (Superintendent of Police)',
@@ -81,7 +81,7 @@ export const eminentAlumni = {
     },
     {
       name: 'Ms. Pratibha Sharma',
-      position: 'DSP (Deputy Superintendent of Police)',
+      position: 'DSP ',
       company: 'Bhopal Central Zone M.P.',
       batch: '2016',
       department: 'EC',
@@ -110,12 +110,12 @@ export const eminentAlumni = {
     {
       name: 'Mr. Salman Khan',
       position: 'Assistant Engineer',
-      company: 'Uttar Pradesh Irrigation and Water Resources Department',
+      company: 'Irrigation Department',
       batch: '2013',
       department: 'Civil Engineering',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749901976/link-generator/zcuv3fc6fm558yp5qqy0.jpg',
-      achievements: ['Assistant Engineer at UP Irrigation Department'],
+      achievements: ['Assistant Engineer at UP Irrigation'],
     },
     {
       name: 'Mr. Kundan Kumar',
@@ -144,7 +144,7 @@ export const eminentAlumni = {
       batch: '2017',
       department: 'Civil Engineering',
       image:
-        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749904222/link-generator/u3moell6elea2kcxycpg.pnghttps://res.cloudinary.com/doxmvuss9/image/upload/v1749930155/link-generator/ta1jiapfnln11w1mtpwy.jpg',
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930155/link-generator/ta1jiapfnln11w1mtpwy.jpg',
       achievements: ['Assistant Engineer NVDA', ''],
     },
   ],
@@ -187,108 +187,116 @@ export const eminentAlumni = {
       department: 'EC',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930554/link-generator/v4xuvhzxzxjnyrqyiphh.jpg',
-      achievements: [
-        'Managing the Technological Department',
-        'Working to make future better',
-      ],
+      achievements: ['Managing the Technological Department'],
     },
   ],
   corporate: [
     {
       name: 'Dr. Nitin Jain',
       position: 'Image Quality Architect',
-      company: 'GE Healthcare Bangalore',
+      company: 'GE Healthcare, Bangalore',
       batch: '2001',
-      department: 'EE',
+      department: 'Electrical Engineering',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930792/link-generator/mwvphyvrbrgtoivmyuwd.jpg',
       achievements: [
-        'Image Quality Architect at GE Healthcare',
-        'Expert in Medical Imaging Technology',
+        'Over 20 years of experience in medical imaging technology',
+        'Leading innovation at GE Healthcare',
       ],
     },
     {
       name: 'Mr. Kumar Aman',
       position: 'Executive Production & Research Coordinator',
-      company: 'Gujarat Credo Alumina Pvt. Ltd',
+      company: 'Gujarat Credo Alumina Pvt. Ltd.',
       batch: '2019',
-      department: 'CM',
+      department: 'Chemical Engineering',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930793/link-generator/hhcnww8ijuoyy6mfp4ig.jpg',
-      achievements: [
-        'Executive Production & Research Coordinator',
-        'Leading production and research initiatives',
-      ],
+      achievements: ['Coordinating major research and production efforts'],
     },
     {
-      name: 'Mr. Shubhendra Upadhyay ',
-      position: 'CEO',
-      company: 'Conivivial Groups of Hotals',
+      name: 'Mr. Shubhendra Upadhyay',
+      position: 'Chief Executive Officer',
+      company: 'Convivial Group of Hotels',
       batch: '2018',
-      department: 'Management ',
+      department: 'Hotel Management',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930792/link-generator/hzeydg5p6hu3otl7uh9d.jpg',
-      achievements: ['CEO'],
+      achievements: [
+        'Founded and scaled a successful hospitality brand',
+        'Focused on customer-first innovation',
+      ],
     },
     {
       name: 'Ms. Khushboo Wali',
       position: 'Software Associate',
       company: 'Hoerbiger, Pune',
       batch: '2018',
-      department: 'Software Management',
+      department: 'Computer Science',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930791/link-generator/x2lvxdgi5d1d8ezo1so3.jpg',
-      achievements: ['Softwar Associate', 'Working towards bright future'],
+      achievements: [
+        'Key contributor to multiple software solutions',
+        'Actively driving digital transformation',
+      ],
     },
   ],
+
   scientists: [
     {
       name: 'Mr. Rajendra Kirar',
       position: 'Scientist',
-      company: 'DEFENCE RESEARCH AND DEVELOPMENT ORGANIZATION, NAGPUR',
+      company: 'Defence Research and Development Organization (DRDO), Nagpur',
       batch: '2011',
-      department: 'EC',
+      department: 'Electronics and Communication',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930924/link-generator/e2m7f0yt6ekm9p06lxxq.jpg',
       achievements: [
-        'Scientist at DRDO Nagpur',
-        'Contributing to defense research',
+        'Working on cutting-edge defense technologies',
+        'Instrumental in key national defense projects',
       ],
     },
     {
       name: 'Mr. Praveen Kumar',
       position: 'Scientist',
-      company: 'INDIAN SPACE RESEARCH ORGANIZATION, AHMEDABAD',
+      company: 'Indian Space Research Organization (ISRO), Ahmedabad',
       batch: '2015',
-      department: 'EC',
+      department: 'Electronics and Communication',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930925/link-generator/dhqvgivbgs8tjllb0jqx.jpg',
       achievements: [
-        'Scientist at ISRO Ahmedabad',
-        'Contributing to space research',
+        'Contributed to multiple ISRO satellite missions',
+        'Focused on advanced space communication systems',
       ],
     },
     {
       name: 'Ms. Shweta Kirkire',
       position: 'Scientist',
-      company: 'INDIAN SPACE RESEARCH ORGANIZATION (ISRO)',
+      company: 'Indian Space Research Organization (ISRO)',
       batch: '2005',
-      department: 'EC',
+      department: 'Electronics and Communication',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930923/link-generator/ropliyltifaoy3ry3ihq.jpg',
-      achievements: [''],
+      achievements: [
+        'Key contributor in remote sensing and telemetry projects',
+        'Over 15 years of experience in satellite technologies',
+      ],
     },
     {
       name: 'Mr. Sachin Malviya',
       position: 'Scientist',
-      company: 'INDIAN SPACE RESEARCH ORGANIZATION, (ISRO) ',
+      company: 'Indian Space Research Organization (ISRO)',
       batch: '2008',
-      department: 'EC',
+      department: 'Electronics and Communication',
       image:
         'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930923/link-generator/demy3alk8wvt9ubjiuob.jpg',
-      achievements: ['Scientist at ISRO ', 'Contributing to space research'],
+      achievements: [
+        'Specialized in propulsion and launch systems',
+        'Contributing to the success of national space missions',
+      ],
     },
   ],
+
   defense: [
     {
       name: 'Major Kanishka Sakwar',

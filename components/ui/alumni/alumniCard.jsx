@@ -1,40 +1,67 @@
-// components/ui/alumni/alumniCard.jsx
-import { motion } from 'framer-motion'
-import { Card, CardContent } from '@/components/ui/card'
-import Image from 'next/image'
+'use client'
 
-export default function AlumniCard({ alumni, className = '' }) {
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+
+const AlumniCard = ({ alumni }) => {
   return (
-    <Card
-      className={`overflow-hidden border-0 shadow-lg transition-all duration-300 ${className}`}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="group relative overflow-hidden rounded-xl bg-white p-4 shadow-lg transition-all duration-300 hover:shadow-xl sm:p-6"
     >
-      <div className="relative h-64">
-        <Image
-          src={alumni.image || '/placeholder.svg'}
-          alt={alumni.name}
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-        <div className="absolute bottom-4 left-4 text-white">
-          <h3 className="text-xl font-bold">{alumni.name}</h3>
-          <p className="text-sm text-blue-200">{alumni.position}</p>
+      <div className="flex flex-col items-center space-y-4">
+        {/* Image Container */}
+        <div className="relative h-48 w-48 overflow-hidden rounded-full">
+          <Image
+            src={alumni.image}
+            alt={alumni.name}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="text-center">
+          <h3 className="text-xl font-bold text-gray-900">{alumni.name}</h3>
+          <p className="mt-1 text-sm font-medium text-gray-600">
+            {alumni.position}
+          </p>
+          <p className="text-sm text-gray-500">{alumni.company}</p>
+
+          <div className="mt-2 space-y-1">
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">Batch:</span> {alumni.batch}
+            </p>
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">Department:</span>{' '}
+              {alumni.department}
+            </p>
+          </div>
+
+          {/* Achievements */}
+          {alumni.achievements && alumni.achievements.length > 0 && (
+            <div className="mt-4">
+              <h4 className="text-sm font-semibold text-gray-900">
+                Achievements
+              </h4>
+              <ul className="mt-2 space-y-1">
+                {alumni.achievements.map(
+                  (achievement, index) =>
+                    achievement && (
+                      <li key={index} className="text-sm text-gray-600">
+                        {achievement}
+                      </li>
+                    )
+                )}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
-      <CardContent className="p-6">
-        <div className="space-y-2">
-          <p className="text-sm text-gray-600">{alumni.batch} Batch</p>
-          <p className="font-medium text-gray-900">{alumni.company}</p>
-          <ul className="mt-4 space-y-2">
-            {alumni.achievements?.map((achievement, index) => (
-              <li key={index} className="flex items-start">
-                <span className="mr-2">•</span>
-                <span className="text-sm text-gray-600">{achievement}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </CardContent>
-    </Card>
+    </motion.div>
   )
 }
+
+export default AlumniCard

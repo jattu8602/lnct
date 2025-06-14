@@ -16,6 +16,10 @@ import {
   Sparkles,
 } from 'lucide-react'
 import Image from 'next/image'
+import GALA from '@/components/gala'
+import EminentAlumniPage from '@/components/eminentAlumni'
+import NewsUpdatesPage from '@/components/news'
+import AlumniCellPage from '@/components/alumni-cell'
 
 // Counter Animation Component
 const AnimatedCounter = ({ end, duration = 2000, suffix = '' }) => {
@@ -156,7 +160,7 @@ export default function AlumniPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900" />
         <div className="absolute inset-0 bg-black/20" />
         <FloatingConfetti />
@@ -181,7 +185,7 @@ export default function AlumniPage() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg cursor-pointer"
               >
                 Join the Alumni Network
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -210,7 +214,7 @@ export default function AlumniPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -219,92 +223,19 @@ export default function AlumniPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="text-center"
+                className="flex flex-col h-full text-center"
               >
-                <Card className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-50 to-purple-50">
-                  <CardContent className="p-0">
+                <Card className="h-full p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-50 to-purple-50">
+                  <CardContent className="flex flex-col justify-between h-full p-0">
                     <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
                       <stat.icon className="w-7 h-7 text-white" />
                     </div>
-                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-                    <p className="text-gray-600 font-medium mt-2">
-                      {stat.label}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Alumni Stories Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Success Stories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet our distinguished alumni who are leading innovation and
-              making impact worldwide
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {alumniStories.map((story, index) => (
-              <motion.div
-                key={story.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="group cursor-pointer"
-                onMouseEnter={() => setActiveStory(index)}
-              >
-                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 bg-white">
-                  <div className="relative">
-                    <Image
-                      src={story.image || '/placeholder.svg'}
-                      alt={story.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 right-4">
-                      <Badge className="bg-blue-600 text-white">
-                        Class of {story.year}
-                      </Badge>
-                    </div>
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {story.name}
-                    </h3>
-                    <p className="text-blue-600 font-medium mb-4">
-                      {story.position}
-                    </p>
-                    <div className="relative">
-                      <Quote className="w-6 h-6 text-blue-300 mb-2" />
-                      <p className="text-gray-600 italic leading-relaxed">
-                        {story.quote}
+                    <div>
+                      <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                      <p className="text-gray-600 font-medium mt-2">
+                        {stat.label}
                       </p>
                     </div>
-                    <div className="flex items-center mt-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 text-yellow-400 fill-current"
-                        />
-                      ))}
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -313,64 +244,16 @@ export default function AlumniPage() {
         </div>
       </section>
 
-      {/* Events Timeline */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Recent Alumni Events
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay connected through our regular meetups, networking events, and
-              celebrations
-            </p>
-          </motion.div>
+      {/* Alumni Cell Section */}
+      {/* <AlumniCellPage /> */}
 
-          <div className="space-y-8">
-            {events.map((event, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`flex flex-col lg:flex-row items-center gap-8 ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
-              >
-                <div className="flex-1">
-                  <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <Image
-                      src={event.image || '/placeholder.svg'}
-                      alt={event.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-48 object-cover"
-                    />
-                  </Card>
-                </div>
-                <div className="flex-1 text-center lg:text-left">
-                  <Badge className="mb-4 bg-blue-100 text-blue-800">
-                    {event.year}
-                  </Badge>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    {event.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* News Updates Section */}
+      <NewsUpdatesPage />
+      {/* GALA Section */}
+      <GALA />
+
+      {/* Eminent Alumni Section */}
+      <EminentAlumniPage />
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 relative overflow-hidden">
