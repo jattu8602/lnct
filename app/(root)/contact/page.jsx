@@ -816,7 +816,7 @@ ${formData.email}
                   immersive experience
                 </p>
                 <Button
-                  className="mt-4"
+                  className="mt-4 cursor-pointer"
                   onClick={() =>
                     window.open('https://tour.lnct.ac.in/LNCT/', '_blank')
                   }
