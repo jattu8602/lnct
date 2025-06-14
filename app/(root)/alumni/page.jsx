@@ -20,6 +20,7 @@ import GALA from '@/components/gala'
 import EminentAlumniPage from '@/components/eminentAlumni'
 import NewsUpdatesPage from '@/components/news'
 import AlumniCellPage from '@/components/alumni-cell'
+import Link from 'next/link'
 
 // Counter Animation Component
 const AnimatedCounter = ({ end, duration = 2000, suffix = '' }) => {
@@ -183,13 +184,15 @@ export default function AlumniPage() {
               leaders who are making a difference across the globe.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg cursor-pointer"
-              >
-                Join the Alumni Network
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <Link href="https://lnct.ac.in/alumni-cell/">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg cursor-pointer"
+                >
+                  Join the Alumni Network
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

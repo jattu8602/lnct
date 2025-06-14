@@ -157,13 +157,15 @@ export default function GALAPage() {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-3 text-lg cursor-pointer"
-              >
-                Learn More
-              </Button>
+              <Link href="https://www.lnctalumni.in/">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-3 text-lg cursor-pointer"
+                >
+                  Learn More
+                </Button>
+              </Link>
             </div>
 
             {/* Quick Stats */}
@@ -362,13 +364,15 @@ export default function GALAPage() {
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
+                  <Link href="https://www.lnctalumni.in/">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-black hover:bg-white/10 px-8 py-3 text-lg cursor-pointer"
-                  >
-                    Contact Us
-                  </Button>
+                    >
+                      Contact Us
+                    </Button>
+                  </Link>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm opacity-80">
