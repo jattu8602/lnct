@@ -175,6 +175,315 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* LNCT Group of Colleges Contact Info Section */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-2">
+              LNCT Group of Colleges
+            </h2>
+            <div className="w-32 h-1 bg-pink-700 mx-auto mb-4 rounded" />
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Main Office Card - exact style and responsive */}
+            <motion.div
+              whileHover={{
+                y: -6,
+                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.12)',
+              }}
+              className="transition-all duration-250 bg-white rounded-xl shadow-lg px-8 py-6 flex flex-col justify-between border border-gray-100 min-h-[320px]"
+            >
+              <div className="space-y-3">
+                <div className="text-[1rem] md:text-[1.05rem]">
+                  <Phone className="w-5 h-5 text-[#8d3267] min-w-[20px] inline-block" />
+                  <span className="ml-2 font-bold text-[#8d3267] whitespace-nowrap inline-block">
+                    RECEPTION :
+                  </span>
+                  <span className="ml-2 text-gray-900 font-semibold break-all">
+                    0755-6185300, 0755-6185300/1/2/3/4/5
+                  </span>
+                </div>
+                <div className="text-[1rem] md:text-[1.05rem]">
+                  <Phone className="w-5 h-5 text-[#b12c6e] min-w-[20px] inline-block" />
+                  <span className="ml-2 font-bold text-[#b12c6e] whitespace-nowrap inline-block">
+                    ADMISSION CELL :
+                  </span>
+                  <span className="ml-2 text-gray-900 font-semibold break-all">
+                    7440777111, 7201800001, 0755-6185350, 0755-6685400
+                  </span>
+                </div>
+                <div className="text-[1rem] md:text-[1.05rem]">
+                  <Phone className="w-5 h-5 text-[#b12c6e] min-w-[20px] inline-block" />
+                  <span className="ml-2 font-bold text-[#b12c6e] whitespace-nowrap inline-block">
+                    TRAINING & PLACEMENT CELL :
+                  </span>
+                  <span className="ml-2 text-gray-900 font-semibold break-all">
+                    9826062730, 0755-6185341
+                  </span>
+                </div>
+                <div className="text-[1rem] md:text-[1.05rem] flex-wrap">
+                  <Mail className="w-5 h-5 text-[#b12c6e] min-w-[20px] inline-block" />
+                  <span className="ml-2 font-bold text-[#b12c6e] whitespace-nowrap inline-block">
+                    EMAIL ID:
+                  </span>
+                  <span className="ml-1 text-gray-900 font-semibold break-all">
+                    INFO@LNCT.AC.IN, ADMISSION@LNCT.AC.IN, JOBS@LNCT.AC.IN
+                  </span>
+                </div>
+                <div className="flex items-start gap-2 text-[1rem] md:text-[1.05rem] mt-2">
+                  <MapPin className="w-5 h-5 text-black min-w-[20px] mt-0.5" />
+                  <span className="ml-1 font-bold text-black break-words">
+                    LNCT CAMPUS, KALCHURI NAGAR, (P.O. KOLUA) RAISEN ROAD,
+                    BHOPAL-462022 (M.P.).
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+            {/* Rewa & Patna Card - exact style and responsive */}
+            <motion.div
+              whileHover={{
+                y: -6,
+                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.12)',
+              }}
+              className="transition-all duration-250 bg-white rounded-xl shadow-lg px-8 py-6 flex flex-col justify-between border border-gray-100 min-h-[320px]"
+            >
+              <div className="space-y-4">
+                <div className="text-[1rem] md:text-[1.05rem]">
+                  <span className="mr-2 font-bold text-[#8d3267] whitespace-nowrap inline-block">
+                    REWA:
+                  </span>
+                  <span className="text-gray-900 font-semibold break-words">
+                    SHOP NO-4 ,FIRST FLOOR, RADHE TOWER NEAR, HOTEL LANDMARK ,
+                    RATAHARA, REWA MP-486001. CONTACT: MR. YATENDRA 9109971007
+                  </span>
+                </div>
+
+                <div className=" text-[1rem] md:text-[1.05rem]">
+                  <span className="mr-2 font-bold text-[#b12c6e] whitespace-nowrap inline-block">
+                    PATNA:
+                  </span>
+                  <span className="text-gray-900 font-semibold break-words">
+                    K- 93 HANUMAN NAGAR NEAR HDFC BANK ATM PATNA (BIHAR)-800020.
+                    CONTACT: MR. AJEET SINGH 9109971002
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* LNCT Group of Colleges Campuses Section */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* LNCT University Campus Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-blue-700 mb-2">
+                  LNCT UNIVERSITY CAMPUS
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  J K TOWN, KOLAR ROAD BHOPAL – 462042, MADHYA PRADESH
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  PHONE: 0755-4049666
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  ADMISSION HELPLINE: 9109971012/13/15/18/21
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  TOLL FREE NO.: 7440777222
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  E-MAIL: ADMISSION@LNCTU.AC.IN
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  WWW.LNCTU.AC.IN
+                </p>
+              </CardContent>
+            </Card>
+            {/* LNCT Vidhyapeeth University Indore Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-purple-700 mb-2">
+                  LNCT VIDHYAPEETH UNIVERSITY INDORE
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  LNCT CAMPUS KANADIA INDORE, MADHYA PRADESH-452016
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  ADMISSION HELPLINE: 7440777999
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  TOLL FREE NO. 7440777999/222/333
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  EMAIL: ADMISSION@LNCTVU.AC.IN
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  WWW.LNCTVU.AC.IN
+                </p>
+              </CardContent>
+            </Card>
+            {/* JNCT Professional University Bhopal Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-blue-700 mb-2">
+                  JNCT PROFESSIONAL UNIVERSITY BHOPAL
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  BAIRASIA ROAD LAMBAKHEDA, CHOUKSEY NAGAR, BHOPAL, MADHYA
+                  PRADESH
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  PHONE: 0755-6615600
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  ADMISSION HELPLINE: 9109180721
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  TOLL FREE NO. 7201800001
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  WWW.JNCTBHOPAL.AC.IN
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  WWW.JNCTPU.EDU.IN
+                </p>
+              </CardContent>
+            </Card>
+            {/* LNCT Jabalpur Campus Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-purple-700 mb-2">
+                  LNCT JABALPUR CAMPUS
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  LNCT, JABALPUR NEAR BHEDAGHAT CHOWK, NH-12, JABALPUR (M.P)
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  PHONE: 7024268888
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  ADMISSION: 7759992222
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  E-MAIL: LNCTJABALPUR@LNCT.AC.IN
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  WWW.LNCTUJ.COM
+                </p>
+              </CardContent>
+            </Card>
+            {/* CEC Bilaspur Campus Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-blue-700 mb-2">
+                  CEC BILASPUR CAMPUS
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  CHOUKSEY GROUP OF COLLEGES, LAL KHADAN, MASTURI ROAD, NH-49,
+                  BILASPUR(C.G.) – 495004
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  PHONE: +91-9752410911
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  E-MAIL: INFO@CECBILASPUR.AC.IN
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  WWW.CECBILASPUR.AC.IN
+                </p>
+              </CardContent>
+            </Card>
+            {/* LNCT Bhopal Campus Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-purple-700 mb-2">
+                  LNCT BHOPAL CAMPUS
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  LNCT CAMPUS KALCHURI NAGAR, RAISEN ROAD, BHOPAL.
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  PHONE: 0755-6185300/1/2/3/4/5
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  ADMISSION HELPLINE: 9109971001/2/3/4/5/6
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  TOLL FREE NO. 7440777111
+                </p>
+              </CardContent>
+            </Card>
+            {/* LNCT Bhopal Indore Campus Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-blue-700 mb-2">
+                  LNCT BHOPAL INDORE CAMPUS
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  (FORMERLY LORD KRISHNA COLLEGE OF TECHNOLOGY)
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  RAU PITHAMPUR BY PASS ROAD, OPP. STI INDIA LTD. INDORE-452002
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  RECEPTION: 9993560901
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  ADMISSION CELL: 9977062525, 9754711574
+                </p>
+              </CardContent>
+            </Card>
+            {/* RCDS Bhopal Campus Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-purple-700 mb-2">
+                  RCDS BHOPAL CAMPUS
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  OPPOSITE RAJA BHOJ AIRPORT, GANDHINAGAR, PIPALNER ROAD, BHOPAL
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  PHONE: +91-7440777333, 8269304518
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  TOLL FREE NO. 7203800001
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  E-MAIL: INFO@LNCTRISHIRAJ.AC.IN
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  WWW.LNCTRISHIRAJ.AC.IN
+                </p>
+              </CardContent>
+            </Card>
+            {/* LNCT World School Campus Card */}
+            <Card className="border-0 shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-bold text-blue-700 mb-2">
+                  LNCT WORLD SCHOOL CAMPUS
+                </h3>
+                <p className="text-gray-700 font-semibold text-sm">
+                  LNCT WORLD SCHOOL, NEW CHOUKSEY NAGAR, BAIRASIA RD, BHOPAL
+                </p>
+                <p className="text-gray-700 font-semibold text-sm">
+                  PHONE: 0755-6615640 (BHOPAL)
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form and Info */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -585,7 +894,7 @@ export default function ContactPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4"
+                  className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4"
                 >
                   <MapPin className="w-5 h-5 mr-2" />
                   Visit Us

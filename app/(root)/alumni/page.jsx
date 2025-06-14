@@ -28,9 +28,7 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '' }) => {
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp
       const progress = Math.min((timestamp - startTime) / duration, 1)
-
       setCount(Math.floor(progress * end))
-
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }
@@ -41,7 +39,7 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '' }) => {
   }, [end, duration])
 
   return (
-    <span>
+    <span className="text-4xl font-bold text-blue-600">
       {count.toLocaleString()}
       {suffix}
     </span>
@@ -158,7 +156,7 @@ export default function AlumniPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900" />
         <div className="absolute inset-0 bg-black/20" />
         <FloatingConfetti />
@@ -173,10 +171,10 @@ export default function AlumniPage() {
               <Sparkles className="w-4 h-4 mr-2" />
               Alumni Network
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               Proud Alumni of LNCT
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Join a network of successful professionals, innovators, and
               leaders who are making a difference across the globe.
             </p>
@@ -194,25 +192,25 @@ export default function AlumniPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Impact in Numbers
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Discover the reach and influence of our alumni community across
               the world
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -223,15 +221,15 @@ export default function AlumniPage() {
                 whileHover={{ scale: 1.05 }}
                 className="text-center"
               >
-                <Card className="p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-50 to-purple-50">
+                <Card className="p-6 border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-50 to-purple-50">
                   <CardContent className="p-0">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-                      <stat.icon className="w-8 h-8 text-white" />
+                    <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                      <stat.icon className="w-7 h-7 text-white" />
                     </div>
-                    <div className="text-4xl font-bold text-gray-900 mb-2">
-                      <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-                    </div>
-                    <p className="text-gray-600 font-medium">{stat.label}</p>
+                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                    <p className="text-gray-600 font-medium mt-2">
+                      {stat.label}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -374,8 +372,8 @@ export default function AlumniPage() {
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 relative overflow-hidden">
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
           <motion.div
@@ -384,10 +382,10 @@ export default function AlumniPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Reconnect. Inspire. Grow.
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
               Be part of a community that continues to learn, share, and create
               opportunities for each other.
             </p>
