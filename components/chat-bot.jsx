@@ -15,8 +15,12 @@ export default function ChatBot({ isOpen, onClose }) {
   ])
   const [inputValue, setInputValue] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [isDragging, setIsDragging] = useState(false)
+  const [dragY, setDragY] = useState(0)
+  const [startY, setStartY] = useState(0)
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
+  const notchRef = useRef(null)
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -29,6 +33,37 @@ export default function ChatBot({ isOpen, onClose }) {
       }, 300)
     }
   }, [isOpen])
+
+  // Touch handlers for swipe to close
+  const handleTouchStart = (e) => {
+    if (!notchRef.current?.contains(e.target)) return
+
+    setIsDragging(true)
+    setStartY(e.touches[0].clientY)
+    setDragY(0)
+  }
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return
+
+    const currentY = e.touches[0].clientY
+    const deltaY = Math.max(0, currentY - startY) // Only allow downward drag
+    setDragY(deltaY)
+  }
+
+  const handleTouchEnd = () => {
+    if (!isDragging) return
+
+    setIsDragging(false)
+
+    // If dragged down more than 100px, close the chatbot
+    if (dragY > 100) {
+      onClose()
+    }
+
+    // Reset drag position
+    setDragY(0)
+  }
 
   const handleSendMessage = async () => {
     if (inputValue.trim() === '') return
@@ -112,6 +147,13 @@ export default function ChatBot({ isOpen, onClose }) {
           'bottom-0 left-0 right-0 md:bottom-6 md:right-6 md:left-auto',
           'md:max-w-[380px] md:w-full'
         )}
+        style={{
+          transform: isDragging ? `translateY(${dragY}px)` : 'translateY(0)',
+          opacity: isDragging ? Math.max(0.5, 1 - dragY / 200) : 1,
+        }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div
           className={cn(
@@ -123,8 +165,17 @@ export default function ChatBot({ isOpen, onClose }) {
               : ''
           )}
         >
-          <div className="flex justify-center pt-2 pb-1 md:hidden">
-            <div className="w-10 h-1 bg-gray-300 rounded-full" />
+          {/* Mobile swipe notch */}
+          <div
+            ref={notchRef}
+            className="flex justify-center pt-2 pb-1 md:hidden cursor-grab active:cursor-grabbing"
+          >
+            <div
+              className={cn(
+                'w-10 h-1 bg-gray-300 rounded-full transition-all duration-200',
+                isDragging && 'bg-red-400 w-12 h-1.5'
+              )}
+            />
           </div>
 
           <div className="relative bg-gradient-to-r from-red-600 to-red-700 text-white p-4 md:p-5 rounded-t-2xl md:rounded-t-2xl">
@@ -138,7 +189,9 @@ export default function ChatBot({ isOpen, onClose }) {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">LNCT Assistant</h3>
-                  <p className="text-white/80 text-sm">Always here to help</p>
+                  <p className="text-white/80 text-sm">
+                    {isDragging ? 'Release to close' : 'Always here to help'}
+                  </p>
                 </div>
               </div>
               <Button
