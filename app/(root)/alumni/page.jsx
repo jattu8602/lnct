@@ -276,6 +276,7 @@ export default function AlumniPage() {
               opportunities for each other.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link href="https://lnct.ac.in/alumni-cell/"></Link>
               <Button
                 size="lg"
                 className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold"
@@ -283,6 +284,7 @@ export default function AlumniPage() {
                 Get Involved
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
+              
             </motion.div>
           </motion.div>
         </div>
