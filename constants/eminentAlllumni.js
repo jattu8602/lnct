@@ -46,7 +46,8 @@ export const eminentAlumni = {
       company: 'Indian Administrative Service',
       batch: '2018',
       department: 'Chemical Engineering',
-      image: '/alumni/eminent/srushti-deshmukh.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749929757/link-generator/w9crjptqppoyzpfl7aen.jpg',
       achievements: [
         'Indian Administrative Service (IAS)',
         'Chemical Engineering Graduate',
@@ -58,19 +59,21 @@ export const eminentAlumni = {
       company: 'Nazira, Assam',
       batch: '2014',
       department: 'CSE',
-      image: '/alumni/eminent/ayushi-jain.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930006/link-generator/qsep4qhguh33iwc1uknj.jpg',
       achievements: [
         'Indian Administrative Service (IAS)',
         'Sub Divisional Officer at Nazira, Assam',
       ],
     },
     {
-      name: 'Mr. Ankit Jain',
+      name: 'Mr. Ankit Jaiswal',
       position: 'SP (Superintendent of Police)',
       company: 'Zone-1 Bhopal M.P.',
       batch: '2014',
       department: 'CSE',
-      image: '/alumni/eminent/ayushi-jain.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930007/link-generator/lklxs6ofx7gs8hayjjb9.jpg',
       achievements: [
         'Indian Police Service (IPS)',
         'Additonal SP at Zone-1 Bhopal M.P.',
@@ -82,7 +85,8 @@ export const eminentAlumni = {
       company: 'Bhopal Central Zone M.P.',
       batch: '2016',
       department: 'EC',
-      image: '/alumni/eminent/ayushi-jain.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930008/link-generator/mc9zpa3x6fa7g9ewgobz.jpg',
       achievements: [
         'Indian Police Service (IPS)',
         'DSP Central Zone Bhopal M.P.',
@@ -94,7 +98,8 @@ export const eminentAlumni = {
       company: 'SDOP Raisen Bhopal M.P.',
       batch: '2014',
       department: 'CSE',
-      image: '/alumni/eminent/ayushi-jain.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930009/link-generator/urzdqjbbrjwyh5axpmlh.jpg',
       achievements: [
         'Indian Police Service (IPS)',
         'Additonal SP at Zone-1 Bhopal M.P.',
@@ -139,7 +144,7 @@ export const eminentAlumni = {
       batch: '2017',
       department: 'Civil Engineering',
       image:
-        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749904222/link-generator/u3moell6elea2kcxycpg.png',
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749904222/link-generator/u3moell6elea2kcxycpg.pnghttps://res.cloudinary.com/doxmvuss9/image/upload/v1749930155/link-generator/ta1jiapfnln11w1mtpwy.jpg',
       achievements: ['Assistant Engineer NVDA', ''],
     },
   ],
@@ -150,7 +155,8 @@ export const eminentAlumni = {
       company: 'Devita Inc. USA',
       batch: '1998',
       department: 'CSE',
-      image: '/alumni/eminent/kamlesh-gehani.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930552/link-generator/sifk1dzrv3hkfrfghzhi.jpg',
       achievements: ['Senior Business Analyst at Devita Inc. USA'],
     },
     {
@@ -159,7 +165,8 @@ export const eminentAlumni = {
       company: 'Gap Inc. USA',
       batch: '1998',
       department: 'CSE',
-      image: '/alumni/eminent/siddhartha-saran.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930553/link-generator/a1gjkko3de4bdmj9alxw.jpg',
       achievements: ['Director IT at Gap Inc. USA'],
     },
     {
@@ -168,18 +175,20 @@ export const eminentAlumni = {
       company: ' Department of Defense, USA',
       batch: '2003',
       department: 'EE',
-      image: '/alumni/eminent/siddhartha-saran.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930554/link-generator/zzfdwb6xanbvct9m5nbe.jpg',
       achievements: ['In US Army'],
     },
     {
-      name: 'Mr. Shiddhartha Saran',
-      position: 'Director IT',
-      company: ' Gap Inc. USA',
-      batch: '1998',
-      department: 'CSE',
-      image: '/alumni/eminent/siddhartha-saran.jpg',
+      name: 'Mr. Kunal Chandana',
+      position: 'Sr. Tech Assistant',
+      company: ' Excelon , Chicago',
+      batch: '2010',
+      department: 'EC',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930554/link-generator/v4xuvhzxzxjnyrqyiphh.jpg',
       achievements: [
-        'Director of IT Department',
+        'Managing the Technological Department',
         'Working to make future better',
       ],
     },
@@ -191,7 +200,8 @@ export const eminentAlumni = {
       company: 'GE Healthcare Bangalore',
       batch: '2001',
       department: 'EE',
-      image: '/alumni/eminent/nitin-jain.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930792/link-generator/mwvphyvrbrgtoivmyuwd.jpg',
       achievements: [
         'Image Quality Architect at GE Healthcare',
         'Expert in Medical Imaging Technology',
@@ -203,7 +213,8 @@ export const eminentAlumni = {
       company: 'Gujarat Credo Alumina Pvt. Ltd',
       batch: '2019',
       department: 'CM',
-      image: '/alumni/eminent/kumar-aman.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930793/link-generator/hhcnww8ijuoyy6mfp4ig.jpg',
       achievements: [
         'Executive Production & Research Coordinator',
         'Leading production and research initiatives',
@@ -215,16 +226,18 @@ export const eminentAlumni = {
       company: 'Conivivial Groups of Hotals',
       batch: '2018',
       department: 'Management ',
-      image: '/alumni/eminent/kumar-aman.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930792/link-generator/hzeydg5p6hu3otl7uh9d.jpg',
       achievements: ['CEO'],
     },
     {
-      name: 'Ms. Khushboo ',
+      name: 'Ms. Khushboo Wali',
       position: 'Software Associate',
       company: 'Hoerbiger, Pune',
       batch: '2018',
       department: 'Software Management',
-      image: '/alumni/eminent/kumar-aman.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930791/link-generator/x2lvxdgi5d1d8ezo1so3.jpg',
       achievements: ['Softwar Associate', 'Working towards bright future'],
     },
   ],
@@ -235,7 +248,8 @@ export const eminentAlumni = {
       company: 'DEFENCE RESEARCH AND DEVELOPMENT ORGANIZATION, NAGPUR',
       batch: '2011',
       department: 'EC',
-      image: '/alumni/eminent/rajendra-kirar.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930924/link-generator/e2m7f0yt6ekm9p06lxxq.jpg',
       achievements: [
         'Scientist at DRDO Nagpur',
         'Contributing to defense research',
@@ -247,7 +261,8 @@ export const eminentAlumni = {
       company: 'INDIAN SPACE RESEARCH ORGANIZATION, AHMEDABAD',
       batch: '2015',
       department: 'EC',
-      image: '/alumni/eminent/praveen-kumar.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930925/link-generator/dhqvgivbgs8tjllb0jqx.jpg',
       achievements: [
         'Scientist at ISRO Ahmedabad',
         'Contributing to space research',
@@ -259,7 +274,8 @@ export const eminentAlumni = {
       company: 'INDIAN SPACE RESEARCH ORGANIZATION (ISRO)',
       batch: '2005',
       department: 'EC',
-      image: '/alumni/eminent/praveen-kumar.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930923/link-generator/ropliyltifaoy3ry3ihq.jpg',
       achievements: [''],
     },
     {
@@ -268,7 +284,8 @@ export const eminentAlumni = {
       company: 'INDIAN SPACE RESEARCH ORGANIZATION, (ISRO) ',
       batch: '2008',
       department: 'EC',
-      image: '/alumni/eminent/praveen-kumar.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749930923/link-generator/demy3alk8wvt9ubjiuob.jpg',
       achievements: ['Scientist at ISRO ', 'Contributing to space research'],
     },
   ],
@@ -279,7 +296,8 @@ export const eminentAlumni = {
       company: 'Indian Army',
       batch: '2016',
       department: 'Civil Engineering',
-      image: '/alumni/eminent/kanishka-sakwar.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749931259/link-generator/sijphzseumdxgr5nlamb.jpg',
       achievements: ['Pilot in Indian Army', 'Major rank officer'],
     },
     {
@@ -288,7 +306,8 @@ export const eminentAlumni = {
       company: 'Indian Navy',
       batch: '2013',
       department: 'EX',
-      image: '/alumni/eminent/manish-rajput.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749931259/link-generator/bl87iymqgjwwc6af6qxq.jpg',
       achievements: [
         'Lieutenant in Indian Navy',
         'Serving in the defense forces',
@@ -300,17 +319,22 @@ export const eminentAlumni = {
       company: 'Indian Army',
       batch: '2016',
       department: 'ME',
-      image: '/alumni/eminent/manish-rajput.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749931258/link-generator/odouhn0bzvp3zsod8boj.jpg',
       achievements: ['Captain in Indian Navy', 'Serving in the defense forces'],
     },
     {
-      name: 'Major Kanishka Sakwar',
-      position: 'Pilot',
-      company: 'Indian Army',
-      batch: '2016',
-      department: 'Civil',
-      image: '/alumni/eminent/manish-rajput.jpg',
-      achievements: ['Captain in Indian Navy', 'Serving in the defense forces'],
+      name: 'Major Rahul Pareek',
+      position: 'Lieutenant',
+      company: 'Indian Navy',
+      batch: '201',
+      department: 'ME',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749931257/link-generator/exakqkps8z8l5rgtphfr.jpg',
+      achievements: [
+        'Lieutenant in Indian Navy',
+        'Serving in the defense forces',
+      ],
     },
   ],
   professors: [
@@ -333,7 +357,8 @@ export const eminentAlumni = {
       company: 'MANIT BHOPAL',
       batch: '2001',
       department: 'CSE',
-      image: '/alumni/eminent/manish-pandey.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749931497/link-generator/s2mapzldwfwtzdaon8nc.jpg',
       achievements: [
         'Professor at MANIT Bhopal',
         'Leading academic initiatives',
@@ -345,7 +370,8 @@ export const eminentAlumni = {
       company: 'MANIT BHOPAL',
       batch: '2002',
       department: 'ME',
-      image: '/alumni/eminent/manish-pandey.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749931498/link-generator/qqpsendsxch4vxtwerpx.jpg',
       achievements: [
         'Professor at MANIT Bhopal',
         'Leading academic initiatives',
@@ -357,7 +383,8 @@ export const eminentAlumni = {
       company: 'MANIT BHOPAL',
       batch: '2001',
       department: 'CSE',
-      image: '/alumni/eminent/manish-pandey.jpg',
+      image:
+        'https://res.cloudinary.com/doxmvuss9/image/upload/v1749931497/link-generator/iguwcdrls6j1m9njkaos.jpg',
       achievements: [
         'Professor at MANIT Bhopal',
         'Leading academic initiatives',
