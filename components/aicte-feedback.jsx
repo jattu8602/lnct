@@ -103,7 +103,7 @@ export default function AICTEFeedback() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
-              <Link href="https://aicte.gov.in/feedback">
+              <Link href="https://www.aicte-india.org/">
                 <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-10 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105 transition-all duration-300 border border-purple-400/30">
                   <span className="flex items-center gap-2">
                     🚀 Submit Feedback
