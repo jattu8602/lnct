@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 
+
 const Button = ({ children, size, variant, className, ...props }) => {
   const baseClasses =
     'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none'
