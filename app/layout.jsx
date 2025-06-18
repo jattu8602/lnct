@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
         />
+        <meta name="google-site-verification" content="Ny8qpvxT634gHZaMHq1gLYfKb52KmQz7lYBzCoCxrus" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased responsive-container`}
