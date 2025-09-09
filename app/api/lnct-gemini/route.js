@@ -3,7 +3,7 @@
 import lnctSystemPrompt from '@/prompts/lnct-system-prompt'
 
 const apiKey =
-  process.env.GEMINI_API_KEY || 'AIzaSyCBIZlmWdWr0n4XiZvS19baTBp8cba2GqI' // Secure in production
+  process.env.GEMINI_API_KEY || 'AIzaSyA7pACDHVN8_lLTpM6JsQ24JXmnKCMd29M' // Secure in production
 
 export async function POST(req) {
   try {
